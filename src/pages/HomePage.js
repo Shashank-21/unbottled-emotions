@@ -28,40 +28,44 @@ function HomePage() {
         </Button>
       </section>
       <section className="flex flex-col items-center justify-between bg-transparent p-5 md:p-10">
-        <h3 className="text-2xl md:text-4xl text-zinc-900 mt-5 mb-10 text-center font-bold">
-          Work with me
-        </h3>
-        <h4 className="text-xl md:text-2xl mt-5 font-bold mb-3 w-5/6 md:w-3/5 text-left">
-          Know my therapeutic approach:
+        <h4 className="text-2xl md:text-4xl text-zinc-900 mt-5 mb-10 text-center font-bold">
+          Why Therapy?
         </h4>
-        <p className="md:text-xl w-5/6 md:w-3/5 text-justify">
-          My go to approaches are Person centered therapy, Cognitive behavior
-          therapy, Queer affirmative therapy and Systemic family therapy. I see
-          clients from a feminist, trauma-informed and intersectional lens. The
-          therapeutic approach is decided based on what the client needs and
-          their presenting concerns.
+        <p className="text-xl md:text-2xl w-5/6 md:w-2/3 text-justify">
+          <span className="italic">
+            "I can talk to my friend. I have a supportive family. Why do I need
+            therapy?"{" "}
+          </span>
+          <br />
+          <br />
+          This question is very common, which makes it all the more important to
+          understand why therapy exists. <br /> <br />
+          When there's a wound, it needs the right treatment. Unlike physical
+          wounds, we have no idea of how emotional wounds need to be addressed.
+          We're told that what we feel doesn't matter, which doesn't give us the
+          safe space to express ourselves. Or our feelings are echoed to the
+          point that it seems much bigger than what it actually is. Both are
+          harmful. Yet, this is what ends up happening!
+          <br /> <br />
+          This is why we need therapy! By consulting a trained professional, we
+          are guaranteed a safe and non-judgemental space to express ourselves.
+          Once a therapist understands the specific challenge, they usually dig
+          deep to find the root cause, and help us with strategies and tools to
+          help overcome the challenge. A therapist is also trained to diagnose
+          and address anxiety, depression, trauma, and any other form of mental
+          illness which is seen as a taboo in the common household.
+          <br /> <br />I invite you to learn more about therapy and its
+          benefits, and make an informed decision!
         </p>
-        <h4 className="text-xl md:text-2xl mt-5 font-bold mb-3 w-5/6 md:w-3/5 text-left">
-          Where I Work:
-        </h4>
-        <p className="md:text-xl w-5/6 md:w-3/5 text-justify">
-          I have a blended practice of offline and online. I work with clients
-          online from all over the world through call and video mode. And
-          offline in Dhanbad, Jharkhand.
-        </p>
-        <h4 className="text-xl md:text-2xl mt-5 font-bold mb-3 w-5/6 md:w-3/5 text-left">
-          About Therapy
-        </h4>
-        <p className="md:text-xl w-5/6 md:w-3/5 text-justify">
-          The sessions are for 60 minutes one to one format and 75 minutes for
-          couples and families. The client decides the frequency and scheduling
-          of all sessions based on time and availability. Therapy is a safe and
-          non judgemental space- you can share as little to as much you’re
-          comfortable. It’s a collaborative process which means we work together
-          to understand your needs, goals and areas of work. The therapist
-          believes the client knows the best about their life. We will be
-          discussing the steps and process based on your goals.
-        </p>
+        <Button
+          secondary
+          className="mt-10 md:text-2xl"
+          onClick={() => {
+            navigate("/faqs");
+          }}
+        >
+          FAQs
+        </Button>
       </section>
     </div>
   );
