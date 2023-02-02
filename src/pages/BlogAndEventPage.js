@@ -9,8 +9,8 @@ function BlogAndEventPage() {
       <h3 className="text-3xl md:text-4xl text-center font-bold mt-10">
         Blogs and Events
       </h3>
-      <section className="bg-transparent text-zinc-900 flex flex-col items-center justify-between pb-10 mt-10">
-        <h4 className="text-xl md:text-2xl font-bold mt-4 w-f5/6 md:w-3/5 text-left">
+      <section className="bg-transparent text-zinc-900 flex flex-col items-center justify-between pb-10 mt-10 w-5/6 md:w-3/5 mx-auto">
+        <h4 className="text-xl md:text-2xl font-bold mt-4 w-full text-left">
           Events:
         </h4>
         <ul className="md:text-xl list-disc list-inside">
