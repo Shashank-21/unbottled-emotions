@@ -139,7 +139,7 @@ function ContactPage() {
       </h3>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col items-center justify-around w-5/6 md:w-2/3 my-10 mx-auto p-10 bg-gradient-to-b from-stone-200 to-neutral-200 rounded-lg shadow-xl"
+        className="flex flex-col items-center justify-around w-5/6 md:w-2/3 my-10 mx-auto p-5 md:p-10 bg-gradient-to-b from-stone-200 to-neutral-200 rounded-lg shadow-xl"
       >
         <div className="w-5/6 flex flex-row justify-center items-center mx-auto my-3">
           <input
