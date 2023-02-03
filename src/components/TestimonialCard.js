@@ -1,6 +1,6 @@
 function TestimonialCard({ testimonial }) {
   return (
-    <div className="mb-10 bg-gradient-to-b from-teal-800 via-teal-700 to-teal-800 rounded-lg w-full md:w-2/5 p-5 md:p-10 mx-5 shadow-xl text-white ">
+    <div className="mb-10 bg-teal-800 rounded-lg w-full md:w-2/5 p-5 md:p-10 mx-5 shadow-xl text-white ">
       <p className="text-sm md:text-xl mb-5 italic text-left md:text-justify">
         "{testimonial.testimonial}"
       </p>
