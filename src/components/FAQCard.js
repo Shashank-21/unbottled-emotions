@@ -10,7 +10,7 @@ function FAQCard({ faq }) {
 
   return (
     <div
-      className="w-5/6 md:w-2/3 bg-zinc-300 rounded-lg shadow-xl text-lg md:text-xl p-8 mb-10 border border-zinc-300 cursor-pointer"
+      className="w-5/6 md:w-2/3 bg-pink-300 rounded-lg shadow-xl text-lg md:text-xl p-8 mb-10 border border-zinc-300 cursor-pointer"
       onClick={handleClick}
     >
       <div className="flex flex-row justify-between items-center font-bold">

@@ -9,7 +9,7 @@ function RequestCard({ request }) {
   };
 
   return (
-    <div className="w-11/12 md:w-3/5 bg-zinc-300 rounded-lg shadow-lg mx-auto p-5 md:p-10 mt-5">
+    <div className="w-11/12 md:w-3/5 bg-pink-300 rounded-lg shadow-lg mx-auto p-5 md:p-10 mt-5">
       <div className="flex flex-row justify-between items-center">
         <p className="text-lg md:text-xl font-bold">
           {request.name} (
