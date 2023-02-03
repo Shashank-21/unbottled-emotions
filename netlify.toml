@@ -2,4 +2,5 @@
   from = "/*"
   to = "/index.html"
   status = 200
-  
+REACT_APP_ADMIN_USERNAME = "Unbottled Emotions"
+REACT_APP_ADMIN_PASSWORD = "2mhPqbPAZzdevEAGecKq"
