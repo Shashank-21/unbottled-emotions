@@ -46,6 +46,7 @@ import {
   addBlog,
   captureBlogs,
 } from "./slices/blogs-slice";
+import { adminReducer, verifyUser } from "./slices/admin-slice";
 
 export const store = configureStore({
   reducer: {
@@ -55,6 +56,7 @@ export const store = configureStore({
     faqs: faqReducer,
     color: colorReducer,
     blogs: blogsReducer,
+    admin: adminReducer,
     [requestsApi.reducerPath]: requestsApi.reducer,
     [servicesApi.reducerPath]: servicesApi.reducer,
     [testimonialsApi.reducerPath]: testimonialsApi.reducer,
@@ -94,4 +96,5 @@ export {
   changeBlog,
   addBlog,
   captureBlogs,
+  verifyUser,
 };

@@ -6,7 +6,16 @@ import {
   writeBatch,
   getDoc,
   updateDoc,
+  setDoc,
 } from "firebase/firestore";
+
+import {
+  signOut,
+  getAuth,
+  signInWithPopup,
+  GoogleAuthProvider,
+  onAuthStateChanged,
+} from "firebase/auth";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -57,4 +66,59 @@ export const updateData = async (title, updatedData) => {
   } catch (error) {
     console.log(error);
   }
+};
+
+const provider = new GoogleAuthProvider();
+provider.setCustomParameters({
+  prompt: "select_account",
+});
+
+export const auth = getAuth();
+export const signInWithGooglePopup = () => {
+  return signInWithPopup(auth, provider);
+};
+
+export const createUserDocumentFromAuth = async (
+  userAuth,
+  additionalInformation = {}
+) => {
+  const userDocRef = doc(db, "users", userAuth.uid);
+  const userSnapshot = await getDoc(userDocRef);
+
+  if (!userSnapshot.exists()) {
+    const { displayName, email } = userAuth;
+    const createdAt = new Date();
+
+    try {
+      await setDoc(userDocRef, {
+        displayName,
+        email,
+        createdAt,
+        ...additionalInformation,
+      });
+    } catch (error) {
+      console.log(`error creating the user ${error.message}`);
+    }
+  }
+
+  return userSnapshot;
+};
+
+export const signOutUser = async () => await signOut(auth);
+
+export const onAuthStateChangedListener = (callback) => {
+  onAuthStateChanged(auth, callback);
+};
+
+export const getCurrentUser = () => {
+  return new Promise((resolve, reject) => {
+    const unsubscribe = onAuthStateChanged(
+      auth,
+      (userAuth) => {
+        unsubscribe();
+        resolve(userAuth);
+      },
+      reject
+    );
+  });
 };

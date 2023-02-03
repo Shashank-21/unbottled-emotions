@@ -7,6 +7,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import AboutPage from "./pages/AboutPage";
+import AdminPage from "./pages/AdminPage";
 import BlogAndEventPage from "./pages/BlogAndEventPage";
 import BlogPage from "./pages/BlogPage";
 import ContactPage from "./pages/ContactPage";
@@ -58,6 +59,7 @@ function App() {
         })}
       </Route>
       <Route path="faqs" element={<FAQPage />} />
+      <Route path="admin" element={<AdminPage />} />
     </Route>
   );
 

@@ -119,7 +119,9 @@ function ContactPage() {
         selectedOption: pronouns.selectedOption,
         customOption: pronouns.customOption ? pronouns.customOption : null,
       },
-      concerns: concerns.selectedOptions,
+      concerns: concerns.selectedOptions.filter((option) => {
+        return option !== "Other";
+      }),
     };
     if (concerns.customOption) {
       requestData.concerns.push(concerns.customOption);
