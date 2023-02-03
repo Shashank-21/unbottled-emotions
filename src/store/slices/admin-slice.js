@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const adminSlice = createSlice({
   name: "admin",
   initialState: {
+    username: process.env.REACT_APP_ADMIN_USERNAME,
     signedIn: false,
     redirect: false,
   },
