@@ -28,7 +28,7 @@ function AdminPage() {
   }, [admin, navigate]);
 
   const adminContent = (
-    <div className="min-h-screen bg-zinc-50 flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-pink-100 via-fuchsia-100 to-rose-100 flex flex-col">
       <h3 className="text-2xl md:text-3xl my-5 text-center font-bold">
         Requests
       </h3>
@@ -51,7 +51,7 @@ function AdminPage() {
   };
 
   const signInForm = (
-    <div className="min-h-screen bg-zinc-50 flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-pink-100 via-fuchsia-100 to-rose-100 flex flex-col">
       <p className="text-center mt-64">You need to sign in to get access</p>
       <form
         className="flex flex-col items-center justify-center"

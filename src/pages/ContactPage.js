@@ -135,7 +135,7 @@ function ContactPage() {
   };
 
   return (
-    <div className="flex flex-col bg-gray-50">
+    <div className="flex flex-col bg-gradient-to-br from-pink-100 via-fuchsia-100 to-rose-100">
       <h3 className="text-3xl md:text-4xl text-center font-bold mt-10">
         Contact Me
       </h3>

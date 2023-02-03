@@ -5,7 +5,7 @@ function BlogPage({ blog }) {
   const blogs = useSelector((state) => state.blogs);
 
   return (
-    <div className=" bg-zinc-50 mx-auto mt-5">
+    <div className=" bg-gradient-to-br from-pink-100 via-fuchsia-100 to-rose-100 mx-auto mt-5">
       <section className="flex flex-col justify-around p-5 md:p-10 w-5/6 md:w-3/5 mx-auto">
         <h3 className="my-10 text-2xl md:text-3xl font-bold text-center">
           {blog.title}

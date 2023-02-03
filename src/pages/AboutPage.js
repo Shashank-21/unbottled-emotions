@@ -9,7 +9,7 @@ function AboutPage() {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100">
+    <div className="bg-gradient-to-br from-pink-100 via-fuchsia-100 to-rose-100">
       <section className="bg-transparent text-zinc-900 flex flex-col items-center justify-between pb-10 shadow-inner">
         <h3 className="text-3xl md:text-4xl text-stone-900 my-5 md:my-10 font-bold">
           About me

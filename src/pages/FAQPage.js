@@ -10,7 +10,7 @@ function FAQPage() {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-zinc-100 flex flex-col justify-start items-center">
+    <div className="bg-gradient-to-br from-pink-100 via-fuchsia-100 to-rose-100 flex flex-col justify-start items-center">
       <h3 className="text-2xl md:text-3xl text-stone-900 my-5 md:my-10 font-bold">
         Frequently Asked Questions
       </h3>

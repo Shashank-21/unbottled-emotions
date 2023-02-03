@@ -7,7 +7,7 @@ function HomePage() {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100">
+    <div className="bg-gradient-to-br from-pink-100 via-fuchsia-100 to-rose-100">
       <section className="flex flex-col items-center justify-center bg-transparent shadow-inner">
         <img
           src={ProfilePic}
