@@ -11,7 +11,7 @@ function FAQPage() {
 
   return (
     <div className="bg-zinc-100 flex flex-col justify-start items-center">
-      <h3 className="text-3xl md:text-4xl text-stone-900 my-5 md:my-10 font-bold">
+      <h3 className="text-2xl md:text-3xl text-stone-900 my-5 md:my-10 font-bold">
         Frequently Asked Questions
       </h3>
       {faqs.map((faq) => {
@@ -27,7 +27,7 @@ function FAQPage() {
         Book a Call
       </Button>
       <section className="flex flex-col items-center justify-between bg-gradient-to-b from-zinc-200 to-stone-200 p-5 md:p-10">
-        <h4 className="text-2xl md:text-4xl text-zinc-900 my-5 text-center font-bold">
+        <h4 className="text-2xl md:text-4xl text-zinc-900 mt-5 mb-10 text-center font-bold">
           Testimonials
         </h4>
         <div className="flex flex-col items-center justify-between md:flex-row md:justify-around">
