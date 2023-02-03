@@ -1,4 +1,3 @@
-import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 
@@ -6,8 +5,6 @@ import ProfilePic from "../images/christina-wocintechchat-com-0Zx1bDv5BNY-unspla
 
 function HomePage() {
   const navigate = useNavigate();
-  const admin = useSelector((state) => state.admin);
-  console.log(admin);
 
   return (
     <div className="bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100">

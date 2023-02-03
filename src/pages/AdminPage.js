@@ -27,8 +27,6 @@ function AdminPage() {
     };
   }, [admin, navigate]);
 
-  console.log(admin);
-
   const adminContent = (
     <div className="min-h-screen bg-zinc-50 flex flex-col">
       <h3 className="text-2xl md:text-3xl my-5 text-center font-bold">
