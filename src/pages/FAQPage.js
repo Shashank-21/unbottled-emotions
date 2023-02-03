@@ -11,7 +11,7 @@ function FAQPage() {
 
   return (
     <div className="bg-zinc-100 flex flex-col justify-start items-center">
-      <h3 className="text-3xl md:text-4xl text-stone-900 my-5 md:my-10 font-bold">
+      <h3 className="text-2xl md:text-3xl text-stone-900 my-5 md:my-10 font-bold">
         Frequently Asked Questions
       </h3>
       {faqs.map((faq) => {
