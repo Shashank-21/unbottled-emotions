@@ -69,7 +69,6 @@ function ContactPage() {
       setConcerns({
         ...concerns,
         selectedOptions: [...concerns.selectedOptions, event.target.value],
-        isOtherSelected: event.target.value === "Other",
       });
     } else {
       setConcerns({
@@ -77,9 +76,14 @@ function ContactPage() {
         selectedOptions: concerns.selectedOptions.filter(
           (option) => option !== event.target.value
         ),
-        isOtherSelected: event.target.value === "Other",
       });
     }
+    setConcerns((value) => {
+      return {
+        ...value,
+        isOtherSelected: value.selectedOptions.includes("Other"),
+      };
+    });
   };
   const handleProfessionChange = (event) => {
     setProfession({
@@ -152,7 +156,7 @@ function ContactPage() {
             placeholder="Age"
             value={age ? age : ""}
             onChange={handleAgeChange}
-            className="w-1/3 h-10 md:h-12 border border-zinc-900 rounded-lg px-5 text-xl md:text-2xl"
+            className="w-2/5 md:w-1/3 h-10 md:h-12 border border-zinc-900 rounded-lg px-5 text-xl md:text-2xl"
           />
         </div>
 
@@ -160,23 +164,23 @@ function ContactPage() {
           question={pronouns}
           onInputChange={handlePronounsChange}
           onCustomOptionChange={handleCustomPronounChange}
-          className="w-5/6 md:w-3/5"
+          className="w-full md:w-3/5"
         />
         <RadioInput
           question={beenToTherapy}
           onInputChange={handleBeenToTherapyChange}
-          className="w-5/6 md:w-3/5"
+          className="w-full md:w-3/5"
         />
         <RadioInput
           question={profession}
           onInputChange={handleProfessionChange}
-          className="w-5/6 md:w-3/5"
+          className="w-full md:w-3/5"
         />
         <CheckboxInput
           question={concerns}
           onInputChange={handleConcernsChange}
           onCustomOptionChange={handleCustomConcernChange}
-          className="w-5/6 md:w-3/5"
+          className="w-full md:w-3/5"
         />
         <Button primary className="mt-10 text-lg">
           Submit

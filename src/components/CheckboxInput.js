@@ -10,7 +10,7 @@ function CheckboxInput({
   return (
     <div
       className={
-        "flex flex-col justify-around items-start mt-10 bg-gradient-to-b from-zinc-50 to-stone-50 rounded-lg px-10 py-5" +
+        "flex flex-col justify-around items-start mt-10 bg-gradient-to-b from-zinc-50 to-stone-50 rounded-lg p-5 md:p-10" +
         " " +
         appliedClass
       }

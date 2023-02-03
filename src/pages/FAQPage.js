@@ -27,7 +27,7 @@ function FAQPage() {
         Book a Call
       </Button>
       <section className="flex flex-col items-center justify-between bg-gradient-to-b from-zinc-200 to-stone-200 p-5 md:p-10">
-        <h4 className="text-2xl md:text-4xl text-zinc-900 my-5 text-center font-bold">
+        <h4 className="text-2xl md:text-4xl text-zinc-900 my-10 text-center font-bold">
           Testimonials
         </h4>
         <div className="flex flex-col items-center justify-between md:flex-row md:justify-around">
