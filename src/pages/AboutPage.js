@@ -76,7 +76,7 @@ function AboutPage() {
                 Bengaluru.
               </li>
               <li className="my-3">
-                Training in Couple and Family Therapy from TISS, Mumbai
+                Training in Couple & Family Therapy from TISS, Mumbai
               </li>
               <li className="my-3">
                 Trained in Queer Affirmative Counseling practice QACP from
