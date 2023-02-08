@@ -76,7 +76,7 @@ function AboutPage() {
                 Bengaluru.
               </li>
               <li className="my-3">
-                Training in Couple & Family Therapy from TISS, Mumbai
+                Trained in Couple & Family Therapy from TISS, Mumbai
               </li>
               <li className="my-3">
                 Trained in Queer Affirmative Counseling practice QACP from
@@ -85,12 +85,15 @@ function AboutPage() {
               <li className="my-3">
                 Trained in Brainspotting Phase 1 from Mariya Javed Payne
               </li>
+              <li className="my-3">
+                Trained in Trauma-informed care from TISS, Mumbai
+              </li>
             </ul>
             <h4 className="text-xl md:text-3xl font-bold my-5">
               What I would like you to know:
             </h4>
             <p className="text-lg md:text-2xl text-left md:text-justify">
-              I’m Trauma informed and multi cultural sensitive. I believe in an
+              I’m Trauma-informed and multi-cultural sensitive. I believe in an
               intersectional approach and how context and power plays a huge
               role in mental health. Personal is political. I also wish to build
               a collaborative relationship with all my clientele. I ensure there
