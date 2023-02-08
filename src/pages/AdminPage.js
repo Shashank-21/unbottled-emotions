@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import RequestCard from "../components/RequestCard";
 import { verifyUser } from "../store";
+import { motion } from "framer-motion";
 
 function AdminPage() {
   const [username, setUsername] = useState("");
@@ -28,14 +29,20 @@ function AdminPage() {
   }, [admin, navigate]);
 
   const adminContent = (
-    <div className="min-h-screen bg-gradient-to-br from-pink-100 via-fuchsia-100 to-rose-100 flex flex-col">
+    <motion.div
+      layout
+      transition={{
+        layout: { duration: 1, type: "spring" },
+      }}
+      className="min-h-screen bg-stone-50 flex flex-col"
+    >
       <h3 className="text-2xl md:text-3xl my-5 text-center font-bold">
         Requests
       </h3>
       {requests.map((request) => {
         return <RequestCard request={request} key={request.id} />;
       })}
-    </div>
+    </motion.div>
   );
 
   const handleUsernameChange = (event) => {
@@ -51,7 +58,7 @@ function AdminPage() {
   };
 
   const signInForm = (
-    <div className="min-h-screen bg-gradient-to-br from-pink-100 via-fuchsia-100 to-rose-100 flex flex-col">
+    <div className="min-h-screen flex flex-col bg-stone-50">
       <p className="text-center mt-64">You need to sign in to get access</p>
       <form
         className="flex flex-col items-center justify-center"

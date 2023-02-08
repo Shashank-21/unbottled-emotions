@@ -1,3 +1,57 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+   @font-face {
+    font-family: 'Lusitana Regular';
+    src: local('Lusitana-Regular'), url('./fonts/Lusitana-Regular.ttf') format('truetype');
+  }
+   @font-face {
+    font-family: 'Lusitana Bold';
+    src: local('Lusitana-Bold'), url('./fonts/Lusitana-Bold.ttf') format('truetype');
+  }
+   @font-face {
+    font-family: 'Raleway Bold';
+    src: local('Raleway-Bold'), url('./fonts/Raleway-Bold.ttf') format('truetype');
+  }
+   @font-face {
+    font-family: 'Raleway Regular';
+    src: local('Raleway-Regular'), url('./fonts/Raleway-Regular.ttf') format('truetype');
+  }
+   @font-face {
+    font-family: 'Helvetica Bold';
+    src: local('Helvetica Neu Bold'), url('./fonts/Helvetica Neu Bold.ttf') format('truetype');
+  }
+   @font-face {
+    font-family: 'Helvetica Regular';
+    src: local('HelveticaNeueMed'), url('./fonts/HelveticaNeueMed.ttf') format('truetype');
+  }
+   @font-face {
+    font-family: 'EBGaramond Regular';
+    src: local('EBGaramond-Regular'), url('./fonts/EBGaramond-Regular.ttf') format('truetype');
+  }
+   @font-face {
+    font-family: 'EBGaramond Bold';
+    src: local('EBGaramond-Bold'), url('./fonts/EBGaramond-Bold.ttf') format('truetype');
+  }
+html {
+    font-family: 'EBGaramond Regular';
+  }
+  .font-bold {
+    font-family: 'Helvetica Bold';
+  }
+
+  .font-bold-inline {
+    font-family: 'EBGaramond Bold';
+  }
+
+  .home-and-header {
+    font-family: 'Helvetica Regular';
+  }
+
+  button {
+    font-family:'Helvetica Regular';
+  }
+  
+}

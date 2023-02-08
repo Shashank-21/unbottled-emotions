@@ -25,7 +25,7 @@ function Footer({ routes }) {
   ];
   return (
     <footer
-      className={`flex flex-col items-center justify-between ${color.footerBgColor} ${color.textColor} py-5 shadow-inner`}
+      className={`flex flex-col items-center justify-between ${color.footerBgColor} ${color.textColor} py-5 shadow-inner home-and-header`}
     >
       <div className="md:h-full flex flex-col md:flex-row items-center md:items-start justify-between md:justify-around w-full">
         <div className="md:h-full md:w-1/4 mx-10 flex flex-col justify-around items-center my-5">

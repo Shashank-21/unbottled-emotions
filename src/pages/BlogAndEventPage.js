@@ -1,11 +1,28 @@
 import { useSelector } from "react-redux";
 import BlogDisplay from "../components/BlogDisplay";
+import { motion } from "framer-motion";
+
+const sectionVariants = {
+  hidden: {
+    x: "-10vw",
+  },
+  visible: {
+    x: 0,
+    transition: {
+      type: "tween",
+      duration: 0.5,
+    },
+  },
+};
 
 function BlogAndEventPage() {
   const blogs = useSelector((state) => state.blogs);
 
   return (
-    <div className="flex flex-col bg-gradient-to-br from-pink-100 via-fuchsia-100 to-rose-100">
+    <motion.div
+      variants={sectionVariants}
+      className="flex flex-col bg-stone-50"
+    >
       <h3 className="text-3xl md:text-4xl text-center font-bold mt-10">
         Blogs and Events
       </h3>
@@ -41,7 +58,7 @@ function BlogAndEventPage() {
           return <BlogDisplay blog={blog} key={blog.id} />;
         })}
       </section>
-    </div>
+    </motion.div>
   );
 }
 

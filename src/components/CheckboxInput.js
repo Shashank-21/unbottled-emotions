@@ -3,17 +3,18 @@ function CheckboxInput({
   onInputChange,
   className,
   onCustomOptionChange,
+  entryError,
 }) {
   const { stem, options, selectedOptions, customOption } = question;
   const appliedClass = className;
 
   return (
     <div
-      className={
-        "flex flex-col justify-around items-start mt-10 bg-gradient-to-b from-zinc-50 to-stone-50 rounded-lg p-5 md:p-10" +
-        " " +
-        appliedClass
-      }
+      className={`flex flex-col justify-around items-start mt-10 bg-indigo-50 rounded-lg p-5 md:p-10 ${appliedClass} ${
+        entryError && question.selectedOptions.length === 0
+          ? "border-2 border-red-600"
+          : ""
+      } `}
     >
       <p className="text-xl md:text-2xl mb-5 w-full text-left font-bold">
         {question.stem}
@@ -45,6 +46,11 @@ function CheckboxInput({
           </div>
         );
       })}
+      {entryError && question.selectedOptions.length === 0 && (
+        <p className="text-md md:text-lg mt-5 text-red-600">
+          Please select at least one option
+        </p>
+      )}
     </div>
   );
 }

@@ -26,7 +26,9 @@ function MobileNavigataionBar({ routes }) {
     >
       {isOpen ? (
         <div className="w-full h-12 flex flex-row justify-between px-5 py-10 items-center my-auto">
-          <span className="text-xl text-white">Unbottled Emotions</span>
+          <span className="text-xl text-white home-and-header">
+            Unbottled Emotions
+          </span>
           <VscChromeClose
             className="text-white text-2xl cursor-pointer"
             onClick={handleCloseClick}
@@ -34,7 +36,9 @@ function MobileNavigataionBar({ routes }) {
         </div>
       ) : (
         <div className="w-full flex flex-row justify-between p-5 items-center my-auto">
-          <span className="text-xl text-white">Unbottled Emotions</span>
+          <span className="text-xl text-white home-and-header">
+            Unbottled Emotions
+          </span>
           <AiOutlineMenu
             className="text-white text-2xl cursor-pointer"
             onClick={handleOpenClick}
@@ -49,8 +53,8 @@ function MobileNavigataionBar({ routes }) {
               to={route.path}
               className={({ isActive }) =>
                 isActive
-                  ? "m-3 p-3 font-semibold text-white text-xl bg-teal-900 cursor-pointer w-full text-center"
-                  : "m-3 p-3 text-white text-lg cursor-pointer"
+                  ? "m-3 p-3 font-bold text-yellow-200 text-xl bg-fuchsia-900 cursor-pointer w-full text-center"
+                  : "m-3 p-3 text-white text-lg cursor-pointer home-and-header"
               }
             >
               {route.name}

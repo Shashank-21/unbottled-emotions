@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { useState } from "react";
+import { motion } from "framer-motion";
 
 function Button({
   children,
@@ -12,40 +12,47 @@ function Button({
   className,
   ...rest
 }) {
-  const [isHoveringOver, setIsHoveringOver] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsHoveringOver(true);
-  };
-  const handleMouseLeave = () => {
-    setIsHoveringOver(false);
+  const buttonVariants = {
+    hover: {
+      scale: 1.1,
+      textShadow: `0px 0px 8px ${
+        primary ? "rgb(192 132 252)" : "rgb(229 231 235)"
+      }`,
+      boxShadow: `0px 0px 8px ${
+        primary ? "rgb(192 132 252)" : "rgb(229 231 235)"
+      }`,
+      transition: {
+        duration: 0.5,
+      },
+    },
   };
 
   const classes = classNames(
     className,
     "flex items-center justify-center px-6 py-3 border-2 cursor-pointer rounded-xl shadow-md shadow-gray-500",
-    `${isHoveringOver ? "scale-110" : ""}`,
     {
-      "border-blue-600 bg-blue-600 text-white": primary && !outline,
+      "border-purple-900 bg-purple-900 text-white": primary && !outline,
       "border-green-800 bg-green-800 text-white": success && !outline,
       "border-yellow-500 bg-yellow-400 text-black": warning && !outline,
       "border-gray-900 bg-gray-900 text-white": secondary && !outline,
       "rounded-full": rounded,
-      "border-blue-600 bg-white text-blue-600 ": outline && primary,
+      "border-purple-900 bg-white text-purple-900 ": outline && primary,
       "border-green-600 bg-white text-green-600": outline && success,
       "border-yellow-500 bg-white text-yellow-500": outline && warning,
       "border-gray-900 bg-white text-gray-900": outline && secondary,
     }
   );
   return (
-    <button
+    <motion.button
+      layout="position"
+      variants={buttonVariants}
+      whileHover="hover"
+      transition={{ layout: { type: "spring", damping: 25, stiffness: 100 } }}
       className={classes}
       {...rest}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
     >
       {children}
-    </button>
+    </motion.button>
   );
 }
 
