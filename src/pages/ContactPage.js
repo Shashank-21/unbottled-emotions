@@ -27,7 +27,7 @@ function ContactPage() {
   const [name, setName] = useState("");
   const [age, setAge] = useState(0);
   const [beenToTherapy, setBeenToTherapy] = useState({
-    stem: "Have you ever been to Therapy before?",
+    stem: "Have you ever been to therapy before?",
     options: ["Yes", "No"],
     selectedOption: "",
   });
@@ -175,12 +175,12 @@ function ContactPage() {
       variants={sectionVariants}
       className="flex flex-col bg-stone-50"
     >
-      <h3 className="text-3xl md:text-4xl text-center font-bold mt-10">
+      <h3 className="text-3xl md:text-4xl text-center text-gray-800 font-bold mt-10">
         Get in Touch
       </h3>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col items-center justify-around w-11/12 md:w-2/3 my-10 mx-auto p-5 md:p-10 bg-indigo-200 border-4 border-indigo-200 rounded-lg shadow-2xl"
+        className={`flex flex-col items-center justify-around w-11/12 md:w-2/3 my-10 mx-auto p-5 md:p-10 bg-pink-100 rounded-lg shadow-2xl`}
       >
         <div className="w-5/6 flex flex-col justify-center items-center mx-auto my-3">
           <input
@@ -189,7 +189,7 @@ function ContactPage() {
             value={name}
             onChange={handleNameChange}
             className={`h-10 md:h-12 border-2 ${
-              entryError && name === "" ? "border-red-600" : "border-zinc-900"
+              entryError && name === "" ? "border-red-600" : "border-zinc-400"
             } rounded-lg px-5 text-xl md:text-2xl w-11/12`}
           />
           {entryError && name === "" && (
@@ -205,7 +205,7 @@ function ContactPage() {
             value={age ? age : ""}
             onChange={handleAgeChange}
             className={`h-10 md:h-12 border-2 ${
-              entryError && age === 0 ? "border-red-600" : "border-zinc-900"
+              entryError && age === 0 ? "border-red-600" : "border-zinc-400"
             } rounded-lg px-5 text-xl md:text-2xl w-11/12`}
           />
           {entryError && name === "" && (

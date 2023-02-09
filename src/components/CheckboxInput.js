@@ -10,11 +10,7 @@ function CheckboxInput({
 
   return (
     <div
-      className={`flex flex-col justify-around items-start mt-10 bg-indigo-50 rounded-lg p-5 md:p-10 ${appliedClass} ${
-        entryError && question.selectedOptions.length === 0
-          ? "border-2 border-red-600"
-          : ""
-      } `}
+      className={`flex flex-col justify-around items-start bg-pink-100 rounded-lg p-5 ${appliedClass}`}
     >
       <p className="text-xl md:text-2xl mb-5 w-full text-left font-bold">
         {question.stem}

@@ -45,7 +45,7 @@ function NavigationPage() {
       renderLink: true,
     },
     {
-      name: "FAQs",
+      name: "Testimonials & FAQs",
       path: "/faqs",
       nodeRef: createRef(),
       renderLink: true,

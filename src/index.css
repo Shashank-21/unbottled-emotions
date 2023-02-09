@@ -35,11 +35,27 @@
     font-family: 'EBGaramond Bold';
     src: local('EBGaramond-Bold'), url('./fonts/EBGaramond-Bold.ttf') format('truetype');
   }
+   @font-face {
+    font-family: 'Sherlock Press';
+    src: local('Sherlock Press Personal Use'), url('./fonts/Sherlock Press Personal Use.ttf') format('truetype');
+  }
+   @font-face {
+    font-family: 'Noto Serif Bold';
+    src: local('NotoSerif-Bold'), url('./fonts/NotoSerif-Bold.ttf') format('truetype');
+  }
+   @font-face {
+    font-family: 'Meno Bold';
+    src: local('Meno Bold'), url('./fonts/Meno Bold.ttf') format('truetype');
+  }
+   @font-face {
+    font-family: 'Calvous';
+    src: local('Calvous'), url('./fonts/Calvous DEMO.otf') format('opentype');
+  }
 html {
     font-family: 'EBGaramond Regular';
   }
   .font-bold {
-    font-family: 'Helvetica Bold';
+    font-family: 'Noto Serif Bold';
   }
 
   .font-bold-inline {
@@ -47,11 +63,12 @@ html {
   }
 
   .home-and-header {
-    font-family: 'Helvetica Regular';
+    font-family: 'Noto Serif Bold';
   }
 
-  button {
-    font-family:'Helvetica Regular';
+  .brand {
+    font-family: 'Noto Serif Bold';
   }
+
   
 }

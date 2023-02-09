@@ -15,12 +15,6 @@ function Button({
   const buttonVariants = {
     hover: {
       scale: 1.1,
-      textShadow: `0px 0px 8px ${
-        primary ? "rgb(192 132 252)" : "rgb(229 231 235)"
-      }`,
-      boxShadow: `0px 0px 8px ${
-        primary ? "rgb(192 132 252)" : "rgb(229 231 235)"
-      }`,
       transition: {
         duration: 0.5,
       },

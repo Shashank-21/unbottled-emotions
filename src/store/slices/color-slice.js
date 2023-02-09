@@ -3,9 +3,10 @@ import { createSlice } from "@reduxjs/toolkit";
 const colorSlice = createSlice({
   name: "services",
   initialState: {
-    headerBgColor: "bg-gradient-to-b from-indigo-800 to-indigo-700",
-    footerBgColor: "bg-gradient-to-b from-indigo-700 to-indigo-800",
-    textColor: "text-white",
+    headerBgColor: "bg-pink-200",
+    footerBgColor: "bg-pink-200",
+    cardBgColor: "bg-pink-200",
+    textColor: "text-gray-600",
   },
   reducers: {
     changeColor(state, action) {

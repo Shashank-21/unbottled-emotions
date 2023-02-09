@@ -10,13 +10,9 @@ function RadioInput({
 
   return (
     <div
-      className={`flex flex-col justify-around items-start mt-10 bg-indigo-50 rounded-lg p-5 md:p-10 ${appliedClass} ${
-        entryError && question.selectedOption === ""
-          ? "border-2 border-red-600"
-          : ""
-      } `}
+      className={`flex flex-col justify-around items-start bg-pink-100 rounded-lg p-5 ${appliedClass} `}
     >
-      <p className="text-xl md:text-2xl mb-5 w-full text-left font-bold">
+      <p className="text-xl md:text-2xl mb-5 w-full text-gray-700 text-left font-bold">
         {question.stem}
       </p>
       {options.map((option, index) => {
@@ -34,13 +30,13 @@ function RadioInput({
               checked={selectedOption === option}
               className="w-6 h-6 cursor-pointer"
             />
-            <label className="text-xl ml-2">{option}</label>
+            <label className="text-xl ml-2 text-gray-700">{option}</label>
             {question.isOtherSelected && option === "Other" && (
               <input
                 type="text"
                 value={customOption ? customOption : ""}
                 onChange={onCustomOptionChange}
-                className="ml-4 w-full md:w-96 h-10 md:h-12 border border-zinc-900 px-3 rounded-lg text-xl"
+                className="ml-4 w-full md:w-96 h-10 md:h-12 border border-zinc-600 px-3 rounded-lg text-xl"
               />
             )}
           </div>

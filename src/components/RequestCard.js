@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { GoChevronDown, GoChevronUp } from "react-icons/go";
 import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
 
 function RequestCard({ request }) {
   const [isOpen, setIsOpen] = useState(false);
+  const { cardBgColor } = useSelector((state) => state.color);
 
   const handleClick = () => {
     setIsOpen((v) => !v);
@@ -15,7 +17,7 @@ function RequestCard({ request }) {
       transition={{
         layout: { duration: 1, type: "spring" },
       }}
-      className="w-11/12 md:w-3/5 bg-indigo-200 text-black rounded-lg shadow-lg mx-auto p-5 md:p-10 mt-5"
+      className={`w-11/12 md:w-3/5 ${cardBgColor} text-black rounded-lg shadow-lg mx-auto p-5 md:p-10 mt-5`}
     >
       <motion.div
         layout="position"

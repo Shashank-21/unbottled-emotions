@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
 
 function BlogDisplay({ blog }) {
+  const { cardBgColor } = useSelector((state) => state.color);
   return (
-    <motion.div className="w-5/6 md:w-3/5 mt-10 mx-auto p-5 text-zinc-900 bg-indigo-200 rounded-lg shadow-xl flex flex-col justify-around">
+    <motion.div
+      className={`w-5/6 md:w-3/5 mt-10 mx-auto p-5 text-zinc-900 ${cardBgColor} rounded-lg shadow-xl flex flex-col justify-around`}
+    >
       <h4 className="text-xl md:text-2xl font-bold w-full text-left">
         {blog.title}
       </h4>

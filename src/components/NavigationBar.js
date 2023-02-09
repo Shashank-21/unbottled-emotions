@@ -31,7 +31,7 @@ function NavigataionBar({ routes }) {
           alt="Unbottled Emotions logo"
           className="w-16 h-16 ml-10"
         />
-        <span className={`md:text-2xl ${color.textColor} font-semibold ml-3`}>
+        <span className={`md:text-4xl ${color.textColor} brand ml-3`}>
           Unbottled Emotions
         </span>
       </div>
@@ -43,7 +43,7 @@ function NavigataionBar({ routes }) {
               to={route.path}
               className={({ isActive }) =>
                 isActive
-                  ? "mx-3 p-3 font-bold text-xl text-yellow-200 border-b-4 border-yellow-200"
+                  ? "mx-3 p-3 font-bold text-xl text-gray-800 border-b-4 border-gray-800"
                   : "mx-3 p-3 text-lg"
               }
             >

@@ -54,7 +54,7 @@ function AboutPage() {
           />
           <div className="md:basis-3/4 md:ml-10 flex flex-col justify-start items-start">
             <p className="text-lg md:text-2xl text-left md:text-justify">
-              Hi! I’m Shubhangi More (she/her), a Mental health therapist. I
+              Hi, I’m Shubhangi More (she/her), a Mental health therapist. I
               have a Master’s of Science degree in Counseling Psychology. I’m
               also trained to work with couples, family and LGBTQ clientele. The
               ability to hold space for someone is what excites and scares me at
@@ -86,14 +86,14 @@ function AboutPage() {
                 Trained in Brainspotting Phase 1 from Mariya Javed Payne
               </li>
               <li className="my-3">
-                Trained in Trauma-informed care from TISS, Mumbai
+                Training in Trauma-informed care from TISS, Mumbai
               </li>
             </ul>
             <h4 className="text-xl md:text-3xl font-bold my-5">
               What I would like you to know:
             </h4>
             <p className="text-lg md:text-2xl text-left md:text-justify">
-              I’m Trauma-informed and multi-cultural sensitive. I believe in an
+              I’m trauma-informed and multi-cultural sensitive. I believe in an
               intersectional approach and how context and power plays a huge
               role in mental health. Personal is political. I also wish to build
               a collaborative relationship with all my clientele. I ensure there

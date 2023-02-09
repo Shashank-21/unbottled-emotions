@@ -2,8 +2,10 @@ import { useState } from "react";
 import { GoChevronUp, GoChevronDown } from "react-icons/go";
 
 import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
 
 function FAQCard({ faq, index }) {
+  const { cardBgColor } = useSelector((state) => state.color);
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => {
     setIsOpen((v) => !v);
@@ -17,7 +19,7 @@ function FAQCard({ faq, index }) {
       }}
       inital="hidden"
       animate="visible"
-      className="w-5/6 md:w-2/3 bg-indigo-200 rounded-xl shadow-xl text-lg md:text-xl p-8 mb-10 text-black cursor-pointer"
+      className={`w-5/6 md:w-2/3 ${cardBgColor} rounded-xl shadow-xl text-lg md:text-xl p-8 mb-10 text-black cursor-pointer`}
       onClick={handleClick}
     >
       <motion.div
