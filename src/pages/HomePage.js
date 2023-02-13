@@ -31,7 +31,7 @@ function HomePage() {
             <img
               src={ProfilePic}
               alt="Subhangi More, Clinical Therapist"
-              className="h-72 my-10 md:w-1/3 md:h-auto"
+              className="h-72 mb-10 md:w-1/3 md:h-auto"
             />
             <div className="md:w-2/3 p-5 md:ml-5">
               <h3 className="text-3xl md:text-4xl text-zinc-600 my-5 text-center home-and-header md:leading-normal">
