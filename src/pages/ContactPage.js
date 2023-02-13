@@ -419,7 +419,7 @@ function ContactPage() {
       initial="hidden"
       animate="visible"
       exit="exit"
-      className="text-3xl md:text-4xl text-center text-gray-800 font-bold mt-10"
+      className="text-3xl md:text-4xl text-center text-zinc-700 font-bold mt-10"
     >
       Begin your therapeutic journey
     </motion.h3>
@@ -431,7 +431,7 @@ function ContactPage() {
       initial="hidden"
       animate="visible"
       exit="exit"
-      className="text-3xl md:text-4xl text-center text-gray-800 font-bold mt-10"
+      className="text-3xl md:text-4xl text-center text-zinc-700 font-bold mt-10"
     >
       Let's make a difference together
     </motion.h3>
