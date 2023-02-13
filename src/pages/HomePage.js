@@ -34,7 +34,7 @@ function HomePage() {
               className="h-72 my-10 md:w-1/4 md:h-auto"
             />
             <div className="md:w-3/4 p-5 md:ml-5">
-              <h3 className="text-4xl md:text-5xl text-zinc-600 my-5 text-center home-and-header md:leading-normal">
+              <h3 className="text-3xl md:text-4xl text-zinc-600 my-5 text-center home-and-header md:leading-normal">
                 "When we talk about our feelings, they become less overwhelming,
                 less upsetting & less scary"
               </h3>
