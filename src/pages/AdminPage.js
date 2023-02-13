@@ -4,11 +4,12 @@ import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import RequestCard from "../components/RequestCard";
 import { verifyUser } from "../store";
-import { motion } from "framer-motion";
+import { LayoutGroup, motion } from "framer-motion";
 
 function AdminPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [requestType, setRequestType] = useState("");
   const requests = useSelector((state) => state.requests);
   const admin = useSelector((state) => state.admin);
   const navigate = useNavigate();
@@ -36,12 +37,53 @@ function AdminPage() {
       }}
       className="min-h-screen bg-stone-50 flex flex-col"
     >
-      <h3 className="text-2xl md:text-3xl my-5 text-center font-bold">
+      <h3 className="text-2xl md:text-3xl my-5 text-center font-bold text-zinc-700">
         Requests
       </h3>
-      {requests.map((request) => {
-        return <RequestCard request={request} key={request.id} />;
-      })}
+      <div className="py-5 w-full md:w-1/4 rounded-lg mx-auto flex flex-col items-center justify-around">
+        <p className="my-3 text-md md:text-lg text-zinc-600">
+          Filter Requests by:
+        </p>
+        <div className="flex flex-col md:flex-row items-center justify-center my-3 w-full">
+          <span
+            className={`p-3 ${
+              requestType === "Therapy"
+                ? "bg-pink-200 border-2 border-pink-300"
+                : "bg-pink-100"
+            } text-md md:text-lg cursor-pointer rounded-lg w-3/5 text-center md:w-fit md:mr-3 text-zinc-600`}
+            onClick={() => {
+              setRequestType((value) => {
+                if (value !== "Therapy") return "Therapy";
+                else return "";
+              });
+            }}
+          >
+            Therapy
+          </span>
+          <span
+            className={`p-3 ${
+              requestType === "Collaboration"
+                ? "bg-pink-200 border-2 border-pink-300"
+                : "bg-pink-100"
+            } text-md md:text-lg cursor-pointer rounded-lg w-3/5 text-center mt-3 md:mt-0 md:w-fit text-zinc-600`}
+            onClick={() => {
+              setRequestType((value) => {
+                if (value !== "Collaboration") return "Collaboration";
+                else return "";
+              });
+            }}
+          >
+            Collaboration
+          </span>
+        </div>
+      </div>
+      <LayoutGroup>
+        {requests
+          .filter((request) => request.type.includes(requestType))
+          .map((request) => {
+            return <RequestCard request={request} key={request.id} />;
+          })}
+      </LayoutGroup>
     </motion.div>
   );
 

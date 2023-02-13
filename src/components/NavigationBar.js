@@ -1,7 +1,5 @@
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { motion } from "framer-motion";
-import logo from "../images/UEicon.jpg";
 
 const headerVariants = {
   hidden: {
@@ -19,22 +17,16 @@ function NavigataionBar({ routes }) {
   const color = useSelector((state) => state.color);
 
   return (
-    <motion.header
+    <header
       variants={headerVariants}
       initial="hidden"
       animate="visible"
       className={`hidden md:flex md:flex-row md:justify-between md:items-center md:h-24 ${color.headerBgColor} ${color.textColor} shadow-xl home-and-header`}
     >
-      <div className="flex flex-row w-fit items-center justify-start">
-        <img
-          src={logo}
-          alt="Unbottled Emotions logo"
-          className="w-16 h-16 ml-10"
-        />
-        <span className={`md:text-4xl ${color.textColor} brand ml-3`}>
-          Unbottled Emotions
-        </span>
-      </div>
+      <p className={`md:text-4xl ${color.textColor} w-fit brand ml-10`}>
+        Unbottled Emotions
+      </p>
+
       <div className="flex flex-row justify-center items-center md:mr-10">
         {routes.map((route, index) => {
           return (
@@ -52,7 +44,7 @@ function NavigataionBar({ routes }) {
           );
         })}
       </div>
-    </motion.header>
+    </header>
   );
 }
 export default NavigataionBar;

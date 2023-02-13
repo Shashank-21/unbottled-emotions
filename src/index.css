@@ -44,18 +44,26 @@
     src: local('NotoSerif-Bold'), url('./fonts/NotoSerif-Bold.ttf') format('truetype');
   }
    @font-face {
-    font-family: 'Meno Bold';
-    src: local('Meno Bold'), url('./fonts/Meno Bold.ttf') format('truetype');
+    font-family: 'Classy Coiffeur Bold';
+    src: local('Classy Coiffeur Bold'), url('./fonts/Classy Coiffeur Bold.otf') format('opentype');
   }
    @font-face {
-    font-family: 'Calvous';
-    src: local('Calvous'), url('./fonts/Calvous DEMO.otf') format('opentype');
+    font-family: 'Gandhi Serif Bold';
+    src: local('GandhiSerif-Bold'), url('./fonts/GandhiSerif-Bold.otf') format('opentype');
+  }
+   @font-face {
+    font-family: 'Butler Bold';
+    src: local('Butler_Bold'), url('./fonts/Butler_Bold.otf') format('opentype');
+  }
+   @font-face {
+    font-family: 'Libre Caslon Bold';
+    src: local('LibreCaslonText-Bold'), url('./fonts/LibreCaslonText-Bold.ttf') format('truetype');
   }
 html {
     font-family: 'EBGaramond Regular';
   }
   .font-bold {
-    font-family: 'Noto Serif Bold';
+    font-family: 'Libre Caslon Bold';
   }
 
   .font-bold-inline {
@@ -63,12 +71,14 @@ html {
   }
 
   .home-and-header {
-    font-family: 'Noto Serif Bold';
+    font-family: 'Libre Caslon Bold';
   }
 
   .brand {
-    font-family: 'Noto Serif Bold';
+    font-family: 'Libre Caslon Bold';
   }
 
-  
+  input[type='textarea']::placeholder{
+    vertical-align:top;
+  }
 }

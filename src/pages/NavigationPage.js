@@ -55,6 +55,11 @@ function NavigationPage() {
     <main>
       <NavigataionBar routes={routes} />
       <MobileNavigataionBar routes={routes} />
+      {currentLocation.pathname !== "/admin" && (
+        <div className="w-full text-center text-xl md:text-2xl font-bold-inline text-zinc-600 bg-stone-50 py-3">
+          Shubhangi More, Mental Health Therapist
+        </div>
+      )}
       <AnimatePresence mode="wait">
         <motion.div
           key={currentLocation.pathname}

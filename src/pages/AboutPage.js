@@ -41,19 +41,19 @@ function AboutPage() {
     <motion.div className="bg-stone-50">
       <motion.section
         variants={sectionVariants}
-        className="bg-transparent text-zinc-900 flex flex-col items-center justify-between pb-10 shadow-inner"
+        className="bg-transparent flex flex-col items-center justify-between pb-10"
       >
-        <h3 className="text-3xl md:text-4xl text-stone-900 my-5 md:my-10 font-bold">
-          About me
-        </h3>
-        <div className="flex flex-col md:flex-row w-5/6">
+        <div className="flex flex-col md:flex-row-reverse w-5/6">
           <img
             src={ProfilePic}
             alt="Shubhangi More, Therapist"
-            className="md:basis-1/4 w-[28rem] mb-10 h-fit"
+            className="md:basis-1/3 w-full md:w-[28rem] xl:w-[32rem] md:mb-10 h-fit"
           />
-          <div className="md:basis-3/4 md:ml-10 flex flex-col justify-start items-start">
-            <p className="text-lg md:text-2xl text-left md:text-justify">
+          <div className="md:basis-2/3 md:mx-10 flex flex-col justify-start items-start md:px-10 my-5">
+            <h4 className="text-xl md:text-3xl font-bold mt-5 text-zinc-700">
+              About Me
+            </h4>
+            <p className="text-lg md:text-2xl text-left md:text-justify text-zinc-600">
               Hi, I’m Shubhangi More (she/her), a Mental health therapist. I
               have a Master’s of Science degree in Counseling Psychology. I’m
               also trained to work with couples, family and LGBTQ clientele. The
@@ -67,10 +67,10 @@ function AboutPage() {
               values are love, justice, compassion and feminism. <br />
               <br />
             </p>
-            <h4 className="text-xl md:text-3xl font-bold mt-4">
-              My Qualifications:
+            <h4 className="text-xl md:text-3xl font-bold mt-5 md:mt-16 text-zinc-700">
+              My Qualifications
             </h4>
-            <ul className="text-lg md:text-2xl list-disc list-inside">
+            <ul className="text-lg md:text-2xl list-disc list-inside text-zinc-600">
               <li className="my-3">
                 MSc Counseling Psychology (Honours) from Montfort College,
                 Bengaluru.
@@ -89,64 +89,65 @@ function AboutPage() {
                 Training in Trauma-informed care from TISS, Mumbai
               </li>
             </ul>
-            <h4 className="text-xl md:text-3xl font-bold my-5">
-              What I would like you to know:
-            </h4>
-            <p className="text-lg md:text-2xl text-left md:text-justify">
-              I’m trauma-informed and multi-cultural sensitive. I believe in an
-              intersectional approach and how context and power plays a huge
-              role in mental health. Personal is political. I also wish to build
-              a collaborative relationship with all my clientele. I ensure there
-              is no hierarchy or a position of authority. Clients know better
-              about their lives and it’s a privilege to learn about their inner
-              worlds.
-            </p>
-            <h4 className="text-xl md:text-3xl mt-5 font-bold mb-5">
-              My Work:
-            </h4>
-            <p className="text-lg md:text-2xl text-left md:text-justify">
-              I’m based out of Dhanbad, Jharkhand, where I’m also working
-              towards de-stigmatizing mental health in the rural population. In
-              the past, I have worked with helplines, rehab centers and various
-              non-profit organizations before I moved into private practice.{" "}
-            </p>
-            <h4 className="text-xl md:text-3xl mt-5 font-bold mb-2">
-              Outside Work:
-            </h4>
-            <p className="text-lg md:text-2xl text-left md:text-justify">
-              Outside of work, you will find me around water, art, cycling and
-              netflix.
-            </p>
-            <h4 className="text-xl md:text-3xl mt-5 font-bold mb-2">
-              About Unbottled Emotions:
-            </h4>
-            <p className="text-lg md:text-2xl text-left md:text-justify">
-              I started out in the beginning of the pandemic in 2020. Unbottled
-              emotions, an online mental health platform to eradicate stigma
-              around mental health and to bridge the gap between our services
-              and the community. As the name suggests, I talk about normalizing
-              all emotions, creating a safe space and to build a community for
-              all. Come, join me on this journey to make our space inclusive and
-              accepting for one and all.
-            </p>
           </div>
+        </div>
+        <div className="flex flex-col w-5/6 md:w-auto my-5 md:mx-48">
+          <h4 className="text-xl md:text-3xl font-bold mb-2 text-zinc-700">
+            What I would like you to know
+          </h4>
+          <p className="text-lg md:text-2xl text-left md:text-justify mb-5 text-zinc-600">
+            I’m trauma-informed and multi-cultural sensitive. I believe in an
+            intersectional approach and how context and power plays a huge role
+            in mental health. Personal is political. I also wish to build a
+            collaborative relationship with all my clientele. I ensure there is
+            no hierarchy or a position of authority. Clients know better about
+            their lives and it’s a privilege to learn about their inner worlds.
+          </p>
+          <h4 className="text-xl md:text-3xl mt-5 font-bold mb-5 text-zinc-700">
+            My Work
+          </h4>
+          <p className="text-lg md:text-2xl text-left md:text-justify mb-5 text-zinc-600">
+            I’m based out of Dhanbad, Jharkhand, where I’m also working towards
+            de-stigmatizing mental health in the rural population. In the past,
+            I have worked with helplines, rehab centers and various non-profit
+            organizations before I moved into private practice.{" "}
+          </p>
+          <h4 className="text-xl md:text-3xl mt-5 font-bold mb-2 text-zinc-700">
+            Outside Work
+          </h4>
+          <p className="text-lg md:text-2xl text-left md:text-justify mb-5 text-zinc-600">
+            Outside of work, you will find me around water, art, cycling and
+            netflix.
+          </p>
+          <h4 className="text-xl md:text-3xl mt-5 font-bold mb-2 text-zinc-700">
+            About Unbottled Emotions
+          </h4>
+          <p className="text-lg md:text-2xl text-left md:text-justify mb-5 text-zinc-600">
+            I started out in the beginning of the pandemic in 2020. Unbottled
+            emotions, an online mental health platform to eradicate stigma
+            around mental health and to bridge the gap between our services and
+            the community. As the name suggests, I talk about normalizing all
+            emotions, creating a safe space and to build a community for all.
+            Come, join me on this journey to make our space inclusive and
+            accepting for one and all.
+          </p>
         </div>
       </motion.section>
       <motion.section
         variants={repeatSectionVariants}
-        className="bg-transparent text-zinc-900 flex flex-col items-center justify-between"
+        className="bg-transparent text-zinc-900 flex flex-col items-center justify-between mt-10 pt-5 md:mx-24"
       >
-        <h3 className="text-3xl md:text-4xl text-zinc-900 my-5 md:my-10 font-bold">
+        <h3 className="text-3xl md:text-4xl text-zinc-700 my-5 md:my-10 font-bold">
           Services
         </h3>
-        <div className="flex flex-col items-center justify-between md:flex-row md:justify-around w-full">
+        <div className="flex flex-col items-center justify-between xl:flex-row md:justify-around w-full">
           {services.map((service) => {
             return <ServiceCard service={service} key={service.id} />;
           })}
         </div>
         <Button
           primary
-          className="mb-10 md:text-2xl"
+          className="my-10 md:text-2xl"
           onClick={() => {
             navigate("/contact");
           }}

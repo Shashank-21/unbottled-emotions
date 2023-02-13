@@ -25,15 +25,14 @@ function Button({
     className,
     "flex items-center justify-center px-6 py-3 border-2 cursor-pointer rounded-xl shadow-md shadow-gray-500",
     {
-      "border-purple-900 bg-purple-900 text-white": primary && !outline,
+      "border-zinc-700 bg-zinc-700 text-white": primary && !outline,
       "border-green-800 bg-green-800 text-white": success && !outline,
       "border-yellow-500 bg-yellow-400 text-black": warning && !outline,
-      "border-gray-900 bg-gray-900 text-white": secondary && !outline,
+
       "rounded-full": rounded,
       "border-purple-900 bg-white text-purple-900 ": outline && primary,
       "border-green-600 bg-white text-green-600": outline && success,
       "border-yellow-500 bg-white text-yellow-500": outline && warning,
-      "border-gray-900 bg-white text-gray-900": outline && secondary,
     }
   );
   return (
