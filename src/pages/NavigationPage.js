@@ -39,7 +39,7 @@ function NavigationPage() {
       renderLink: true,
     },
     {
-      name: "Blogs and Events",
+      name: "Blogs & Events",
       path: "/blogs",
       nodeRef: createRef(),
       renderLink: true,
