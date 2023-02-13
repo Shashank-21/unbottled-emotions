@@ -57,7 +57,7 @@ function HomePage() {
           variants={sectionVariants}
           className="flex flex-col items-center justify-between bg-transparent p-5 md:p-10"
         >
-          <h4 className="text-2xl md:text-3xl my-5 font-bold w-5/6 md:w-3/5 text-left font-bold">
+          <h4 className="text-2xl md:text-3xl my-5 font-bold w-5/6 md:w-3/5 text-left text-zinc-700 font-bold">
             Know my therapeutic approach
           </h4>
           <p className="text-lg md:text-2xl w-5/6 md:w-3/5 text-left md:text-justify text-zinc-600 mb-3">
@@ -67,7 +67,7 @@ function HomePage() {
             lens. The therapeutic approach is decided based on what the client
             needs and their presenting concerns.
           </p>
-          <h4 className="text-2xl md:text-3xl my-5 font-bold w-5/6 md:w-3/5 text-left font-bold">
+          <h4 className="text-2xl md:text-3xl my-5 font-bold w-5/6 md:w-3/5 text-left font-bold text-zinc-700">
             Where I Work
           </h4>
           <p className="text-lg md:text-2xl w-5/6 md:w-3/5 text-left md:text-justify text-zinc-600 mb-3">
@@ -75,7 +75,7 @@ function HomePage() {
             online from all over the world through call and video mode. And
             offline in Dhanbad, Jharkhand.
           </p>
-          <h4 className="text-2xl md:text-3xl my-5 font-bold w-5/6 md:w-3/5 text-left font-bold">
+          <h4 className="text-2xl md:text-3xl my-5 font-bold w-5/6 md:w-3/5 text-left font-bold text-zinc-700">
             About Therapy
           </h4>
           <p className="text-lg md:text-2xl w-5/6 md:w-3/5 text-left md:text-justify text-zinc-600 mb-3">
