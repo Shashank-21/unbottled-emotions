@@ -12,7 +12,7 @@ function CheckboxInput({
     <div
       className={`flex flex-col justify-around items-start bg-pink-100 rounded-lg p-5 ${appliedClass}`}
     >
-      <p className="text-xl md:text-2xl mb-5 w-full text-left font-bold">
+      <p className="text-xl md:text-2xl mb-5 w-full text-left text-zinc-700 font-bold-inline">
         {question.stem}
       </p>
       {options.map((option, index) => {
@@ -30,7 +30,7 @@ function CheckboxInput({
               checked={selectedOptions.includes(option)}
               className="w-6 h-6 cursor-pointer"
             />
-            <label className="text-xl ml-2">{option}</label>
+            <label className="text-xl ml-2 text-zinc-600">{option}</label>
             {question.isOtherSelected && option === "Other" && (
               <input
                 type="text"

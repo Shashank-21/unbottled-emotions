@@ -26,7 +26,7 @@ function FAQCard({ faq, index }) {
         layout="position"
         className="flex flex-row justify-between items-center font-bold"
       >
-        <p className="w-5/6 md:w-fit">{faq.question}</p>
+        <p className="w-5/6 md:w-fit text-zinc-700">{faq.question}</p>
         {isOpen ? <GoChevronUp /> : <GoChevronDown />}
       </motion.div>
       {isOpen && (
@@ -34,7 +34,7 @@ function FAQCard({ faq, index }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="mt-5"
+          className="mt-5 text-zinc-600"
         >
           {faq.answer}
         </motion.div>

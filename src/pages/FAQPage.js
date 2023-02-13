@@ -28,7 +28,7 @@ function FAQPage() {
       variants={sectionVariants}
       className="bg-stone-50 flex flex-col justify-start items-center"
     >
-      <h3 className="text-2xl md:text-3xl text-stone-900 my-5 md:my-10 font-bold">
+      <h3 className="text-2xl md:text-3xl text-zinc-700 my-5 md:my-10 font-bold">
         Frequently Asked Questions
       </h3>
       <LayoutGroup>
@@ -52,7 +52,7 @@ function FAQPage() {
             transition={{
               layout: { type: "spring", damping: 25, stiffness: 100 },
             }}
-            className="text-2xl md:text-4xl text-zinc-900 my-10 text-center font-bold"
+            className="text-2xl md:text-4xl text-zinc-700 my-10 text-center font-bold"
           >
             Testimonials
           </motion.h4>

@@ -6,7 +6,7 @@ const colorSlice = createSlice({
     headerBgColor: "bg-pink-200",
     footerBgColor: "bg-pink-200",
     cardBgColor: "bg-pink-200",
-    textColor: "text-gray-600",
+    textColor: "text-zinc-600",
   },
   reducers: {
     changeColor(state, action) {
