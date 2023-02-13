@@ -135,7 +135,7 @@ function AboutPage() {
       </motion.section>
       <motion.section
         variants={repeatSectionVariants}
-        className="bg-transparent text-zinc-900 flex flex-col items-center justify-between mt-10 pt-5 md:mx-24"
+        className="bg-transparent text-zinc-900 flex flex-col items-center justify-between pt-5 md:mx-24"
       >
         <h3 className="text-3xl md:text-4xl text-zinc-700 my-5 md:my-10 font-bold">
           Services
