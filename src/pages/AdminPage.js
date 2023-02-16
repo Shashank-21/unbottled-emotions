@@ -5,7 +5,10 @@ import Button from "../components/Button";
 import RequestCard from "../components/RequestCard";
 import { verifyUser } from "../store";
 import { LayoutGroup, motion } from "framer-motion";
-import { signInWithGooglePopup } from "../utils/firebase-utils";
+import {
+  signInWithGooglePopup,
+  createUserDocumentFromAuth,
+} from "../utils/firebase-utils";
 
 function AdminPage() {
   const [username, setUsername] = useState("");
@@ -40,7 +43,7 @@ function AdminPage() {
 
   const logGoogleUser = async () => {
     const { user } = await signInWithGooglePopup();
-    console.log(user);
+    await createUserDocumentFromAuth(user, { role: "admin" });
   };
 
   const adminContent = (
