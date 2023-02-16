@@ -38,6 +38,11 @@ function AdminPage() {
     };
   }, [admin, navigate]);
 
+  // const logGoogleUser = async () => {
+  //   const { user } = await signInWithGooglePopup();
+  //   console.log(user);
+  // };
+
   const adminContent = (
     <motion.div
       layout
@@ -132,15 +137,16 @@ function AdminPage() {
           className='h-10 md:h-12 border border-zinc-900 rounded-lg px-5 text-xl md:text-2xl w-5/6 mt-5 mb-5 md:w-1/6'
         />
         <Button primary>Submit</Button>
-        <Button secondary onClick={signInWithGooglePopup} className='mt-5'>
-          Sign in with Google
-        </Button>
+
         {admin.redirect && (
           <p className='mt-5 text-lg text-red-700'>
             Sorry! You're not authorised to view this!
           </p>
         )}
       </form>
+      {/* <Button secondary onClick={logGoogleUser} className='mt-5 w-fit mx-auto'>
+        Sign in with Google
+      </Button> */}
     </div>
   );
 
