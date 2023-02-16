@@ -5,6 +5,7 @@ import Button from "../components/Button";
 import RequestCard from "../components/RequestCard";
 import { verifyUser } from "../store";
 import { LayoutGroup, motion } from "framer-motion";
+import { signInWithGooglePopup } from "../utils/firebase-utils";
 
 function AdminPage() {
   const [username, setUsername] = useState("");
@@ -13,6 +14,14 @@ function AdminPage() {
   const requests = useSelector((state) => state.requests);
   const admin = useSelector((state) => state.admin);
   const navigate = useNavigate();
+
+  const {
+    optionBgColor,
+    optionBgColorSelected,
+    borderColor,
+    headingColor,
+    textColor,
+  } = useSelector((state) => state.color);
 
   const dispatch = useDispatch();
 
@@ -35,22 +44,24 @@ function AdminPage() {
       transition={{
         layout: { duration: 1, type: "spring" },
       }}
-      className="min-h-screen bg-stone-50 flex flex-col"
+      className='min-h-screen bg-stone-50 flex flex-col'
     >
-      <h3 className="text-2xl md:text-3xl my-5 text-center font-bold text-zinc-700">
+      <h3
+        className={`text-2xl md:text-3xl my-5 text-center font-bold ${headingColor}`}
+      >
         Requests
       </h3>
-      <div className="py-5 w-full md:w-1/4 rounded-lg mx-auto flex flex-col items-center justify-around">
-        <p className="my-3 text-md md:text-lg text-zinc-600">
+      <div className='py-5 w-full md:w-1/4 rounded-lg mx-auto flex flex-col items-center justify-around'>
+        <p className={`my-3 text-md md:text-lg ${textColor}`}>
           Filter Requests by:
         </p>
-        <div className="flex flex-col md:flex-row items-center justify-center my-3 w-full">
+        <div className='flex flex-col md:flex-row items-center justify-center my-3 w-full'>
           <span
             className={`p-3 ${
               requestType === "Therapy"
-                ? "bg-pink-200 border-2 border-pink-300"
-                : "bg-pink-100"
-            } text-md md:text-lg cursor-pointer rounded-lg w-3/5 text-center md:w-fit md:mr-3 text-zinc-600`}
+                ? `${optionBgColorSelected} border-2 ${borderColor}`
+                : optionBgColor
+            } text-md md:text-lg cursor-pointer rounded-lg w-3/5 text-center md:w-fit md:mr-3 ${textColor}`}
             onClick={() => {
               setRequestType((value) => {
                 if (value !== "Therapy") return "Therapy";
@@ -63,9 +74,9 @@ function AdminPage() {
           <span
             className={`p-3 ${
               requestType === "Collaboration"
-                ? "bg-pink-200 border-2 border-pink-300"
-                : "bg-pink-100"
-            } text-md md:text-lg cursor-pointer rounded-lg w-3/5 text-center mt-3 md:mt-0 md:w-fit text-zinc-600`}
+                ? `${optionBgColorSelected} border-2 ${borderColor}`
+                : optionBgColor
+            } text-md md:text-lg cursor-pointer rounded-lg w-3/5 text-center mt-3 md:mt-0 md:w-fit ${textColor}`}
             onClick={() => {
               setRequestType((value) => {
                 if (value !== "Collaboration") return "Collaboration";
@@ -100,29 +111,32 @@ function AdminPage() {
   };
 
   const signInForm = (
-    <div className="min-h-screen flex flex-col bg-stone-50">
-      <p className="text-center mt-64">You need to sign in to get access</p>
+    <div className='min-h-screen flex flex-col bg-stone-50'>
+      <p className='text-center mt-64'>You need to sign in to get access</p>
       <form
-        className="flex flex-col items-center justify-center"
+        className='flex flex-col items-center justify-center'
         onSubmit={handleSubmit}
       >
         <input
-          type="text"
-          placeholder="Username"
+          type='text'
+          placeholder='Username'
           value={username}
           onChange={handleUsernameChange}
-          className="h-10 md:h-12 border border-zinc-900 rounded-lg px-5 text-xl md:text-2xl w-5/6 mt-5 md:w-1/6"
+          className='h-10 md:h-12 border border-zinc-900 rounded-lg px-5 text-xl md:text-2xl w-5/6 mt-5 md:w-1/6'
         />
         <input
-          type="password"
-          placeholder="Password"
+          type='password'
+          placeholder='Password'
           value={password}
           onChange={handlePasswordChange}
-          className="h-10 md:h-12 border border-zinc-900 rounded-lg px-5 text-xl md:text-2xl w-5/6 mt-5 mb-5 md:w-1/6"
+          className='h-10 md:h-12 border border-zinc-900 rounded-lg px-5 text-xl md:text-2xl w-5/6 mt-5 mb-5 md:w-1/6'
         />
         <Button primary>Submit</Button>
+        <Button secondary onClick={signInWithGooglePopup} className='mt-5'>
+          Sign in with Google
+        </Button>
         {admin.redirect && (
-          <p className="mt-5 text-lg text-red-700">
+          <p className='mt-5 text-lg text-red-700'>
             Sorry! You're not authorised to view this!
           </p>
         )}

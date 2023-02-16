@@ -6,7 +6,15 @@ const colorSlice = createSlice({
     headerBgColor: "bg-pink-200",
     footerBgColor: "bg-pink-200",
     cardBgColor: "bg-pink-200",
-    textColor: "text-zinc-600",
+    borderColor: "border-pink-300",
+    formBgColor: "bg-pink-100",
+    optionBgColor: "bg-pink-100",
+    optionBgColorSelected: "bg-pink-200",
+    linkBgColorSelected: "bg-pink-300",
+    textColor: "text-gray-600",
+    headingColor: "text-gray-700",
+    navActiveColor: "text-gray-800",
+    navActiveBorderColor: "border-gray-800",
   },
   reducers: {
     changeColor(state, action) {

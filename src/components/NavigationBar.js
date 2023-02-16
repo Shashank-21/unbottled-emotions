@@ -14,20 +14,26 @@ const headerVariants = {
 };
 
 function NavigataionBar({ routes }) {
-  const color = useSelector((state) => state.color);
+  const {
+    headerBgColor,
+    headingColor,
+    navActiveColor,
+    textColor,
+    navActiveBorderColor,
+  } = useSelector((state) => state.color);
 
   return (
     <header
       variants={headerVariants}
-      initial="hidden"
-      animate="visible"
-      className={`hidden md:flex md:flex-row md:justify-between md:items-center md:h-24 ${color.headerBgColor} ${color.textColor} shadow-xl home-and-header`}
+      initial='hidden'
+      animate='visible'
+      className={`hidden md:flex md:flex-row md:justify-between md:items-center md:h-24 ${headerBgColor} ${textColor} shadow-xl home-and-header`}
     >
-      <p className={`md:text-3xl ${color.textColor} w-fit brand ml-10`}>
+      <p className={`md:text-3xl ${textColor} w-fit brand ml-10`}>
         Unbottled Emotions
       </p>
 
-      <div className="flex flex-row justify-center items-center md:mr-10">
+      <div className='flex flex-row justify-center items-center md:mr-10'>
         {routes.map((route, index) => {
           return (
             <NavLink
@@ -35,8 +41,8 @@ function NavigataionBar({ routes }) {
               to={route.path}
               className={({ isActive }) =>
                 isActive
-                  ? "mx-3 p-3 font-bold text-lg text-gray-800 border-b-4 border-gray-800"
-                  : "mx-3 p-3 text-md"
+                  ? `mx-3 p-3 font-bold text-lg ${navActiveColor} border-b-4 ${navActiveBorderColor}`
+                  : `mx-3 p-3 text-md ${headingColor}`
               }
             >
               {route.name}

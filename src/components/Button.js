@@ -25,7 +25,8 @@ function Button({
     className,
     "flex items-center justify-center px-6 py-3 border-2 cursor-pointer rounded-xl shadow-md shadow-gray-500",
     {
-      "border-zinc-700 bg-zinc-700 text-white": primary && !outline,
+      "border-gray-700 bg-gray-700 text-white": primary && !outline,
+      "border-blue-700 bg-blue-700 text-white": secondary && !outline,
       "border-green-800 bg-green-800 text-white": success && !outline,
       "border-yellow-500 bg-yellow-400 text-black": warning && !outline,
 
@@ -37,9 +38,9 @@ function Button({
   );
   return (
     <motion.button
-      layout="position"
+      layout='position'
       variants={buttonVariants}
-      whileHover="hover"
+      whileHover='hover'
       transition={{ layout: { type: "spring", damping: 25, stiffness: 100 } }}
       className={classes}
       {...rest}

@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { createRef } from "react";
+import { useSelector } from "react-redux";
 import { useLocation, useOutlet } from "react-router-dom";
 import Footer from "../components/Footer";
 import MobileNavigataionBar from "../components/MobileNavigation";
@@ -29,6 +30,7 @@ const mainContentVariants = {
 function NavigationPage() {
   const currentOutlet = useOutlet();
   const currentLocation = useLocation();
+  const { textColor } = useSelector((state) => state.color);
   const routes = [
     { name: "Home", path: "/", nodeRef: createRef(), renderLink: true },
     { name: "About", path: "/about", nodeRef: createRef(), renderLink: true },
@@ -56,17 +58,19 @@ function NavigationPage() {
       <NavigataionBar routes={routes} />
       <MobileNavigataionBar routes={routes} />
       {currentLocation.pathname !== "/admin" && (
-        <div className="w-full text-center text-xl md:text-2xl font-bold-inline text-zinc-600 bg-stone-50 py-3">
+        <div
+          className={`w-full text-center text-xl md:text-2xl font-bold-inline ${textColor} bg-stone-50 py-3`}
+        >
           Shubhangi More, Mental Health Therapist
         </div>
       )}
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode='wait'>
         <motion.div
           key={currentLocation.pathname}
           variants={mainContentVariants}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
+          initial='hidden'
+          animate='visible'
+          exit='exit'
         >
           {currentOutlet}
         </motion.div>

@@ -21,14 +21,17 @@ const sectionVariants = {
 function FAQPage() {
   const faqs = useSelector((state) => state.faqs);
   const testimonials = useSelector((state) => state.testimonials);
+  const { headingColor } = useSelector((state) => state.color);
   const navigate = useNavigate();
 
   return (
     <motion.div
       variants={sectionVariants}
-      className="bg-stone-50 flex flex-col justify-start items-center"
+      className='bg-stone-50 flex flex-col justify-start items-center'
     >
-      <h3 className="text-2xl md:text-3xl text-zinc-700 my-5 md:my-10 font-bold">
+      <h3
+        className={`text-2xl md:text-3xl ${headingColor} my-5 md:my-10 font-bold`}
+      >
         Frequently Asked Questions
       </h3>
       <LayoutGroup>
@@ -38,7 +41,7 @@ function FAQPage() {
 
         <Button
           primary
-          className="mb-10 md:text-2xl"
+          className='mb-10 md:text-2xl'
           onClick={() => {
             navigate("/contact");
           }}
@@ -46,13 +49,13 @@ function FAQPage() {
           Work with me
         </Button>
 
-        <section className="flex flex-col items-center justify-between p-5 md:p-10">
+        <section className='flex flex-col items-center justify-between p-5 md:p-10'>
           <motion.h4
             layout
             transition={{
               layout: { type: "spring", damping: 25, stiffness: 100 },
             }}
-            className="text-2xl md:text-4xl text-zinc-700 my-10 text-center font-bold"
+            className={`text-2xl md:text-4xl ${headingColor} my-10 text-center font-bold`}
           >
             Testimonials
           </motion.h4>
@@ -61,7 +64,7 @@ function FAQPage() {
             transition={{
               layout: { type: "spring", damping: 25, stiffness: 100 },
             }}
-            className="flex flex-col items-center justify-between md:flex-row md:justify-around"
+            className='flex flex-col items-center justify-between md:flex-row md:justify-around'
           >
             {testimonials.map((testimonial) => {
               return (

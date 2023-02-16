@@ -42,6 +42,15 @@ const formVariants = {
 };
 
 function ContactPage() {
+  const {
+    optionBgColor,
+    optionBgColorSelected,
+    borderColor,
+    formBgColor,
+    headingColor,
+    textColor,
+  } = useSelector((state) => state.color);
+
   const navigate = useNavigate();
   const regExpEmail = /.+@.+\..+/;
   const regExpPhone = /(\+[0-9]{1,3}-)?\(?[0-9]{3}\)?-?[0-9]{3}-?[0-9]{4}/;
@@ -241,16 +250,16 @@ function ContactPage() {
     <motion.form
       key={`${requestType}-form`}
       variants={formVariants}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
+      initial='hidden'
+      animate='visible'
+      exit='exit'
       onSubmit={handleSubmit}
-      className={`flex flex-col items-center justify-around w-11/12 md:w-2/3 my-10 mx-auto p-5 md:p-10 bg-pink-100 rounded-lg shadow-2xl`}
+      className={`flex flex-col items-center justify-around w-11/12 md:w-2/3 my-10 mx-auto p-5 md:p-10 ${formBgColor} rounded-lg shadow-2xl`}
     >
-      <div className="w-full md:w-5/6 flex flex-col justify-center items-center mx-auto my-3">
+      <div className='w-full md:w-5/6 flex flex-col justify-center items-center mx-auto my-3'>
         <input
-          type="text"
-          placeholder="Name"
+          type='text'
+          placeholder='Name'
           value={name}
           onChange={handleNameChange}
           className={`h-10 md:h-12 border-2 ${
@@ -258,15 +267,15 @@ function ContactPage() {
           } rounded-lg px-5 text-xl md:text-2xl w-full`}
         />
         {entryError && name === "" && (
-          <p className="text-md md:text-lg text-red-600">
+          <p className='text-md md:text-lg text-red-600'>
             Name cannot be blank
           </p>
         )}
       </div>
-      <div className="w-full md:w-5/6 flex flex-col justify-center items-center mx-auto my-3">
+      <div className='w-full md:w-5/6 flex flex-col justify-center items-center mx-auto my-3'>
         <input
-          type="number"
-          placeholder="Age"
+          type='number'
+          placeholder='Age'
           value={age ? age : ""}
           onChange={handleAgeChange}
           className={`h-10 md:h-12 border-2 ${
@@ -274,7 +283,7 @@ function ContactPage() {
           } rounded-lg px-5 text-xl md:text-2xl w-full`}
         />
         {entryError && name === "" && (
-          <p className="text-md md:text-lg text-red-600">Enter a valid age</p>
+          <p className='text-md md:text-lg text-red-600'>Enter a valid age</p>
         )}
       </div>
 
@@ -282,33 +291,33 @@ function ContactPage() {
         question={pronouns}
         onInputChange={handlePronounsChange}
         onCustomOptionChange={handleCustomPronounChange}
-        className="w-full md:w-3/5"
+        className='w-full md:w-3/5'
         entryError={entryError}
       />
       <RadioInput
         question={beenToTherapy}
         onInputChange={handleBeenToTherapyChange}
-        className="w-full md:w-3/5"
+        className='w-full md:w-3/5'
         entryError={entryError}
       />
       <RadioInput
         question={profession}
         onInputChange={handleProfessionChange}
-        className="w-full md:w-3/5"
+        className='w-full md:w-3/5'
         entryError={entryError}
       />
       <CheckboxInput
         question={concerns}
         onInputChange={handleConcernsChange}
         onCustomOptionChange={handleCustomConcernChange}
-        className="w-full md:w-3/5"
+        className='w-full md:w-3/5'
         entryError={entryError}
       />
-      <Button primary className="mt-10 text-lg md:text-xl">
+      <Button primary className='mt-10 text-lg md:text-xl'>
         Submit
       </Button>
       {submitted && !entryError && (
-        <p className="text-lg md:text-xl mt-5 text-emerald-900">
+        <p className='text-xl md:text-2xl mt-5 text-emerald-900'>
           Thank you! I'll be in touch soon!
         </p>
       )}
@@ -319,16 +328,16 @@ function ContactPage() {
     <motion.form
       key={`${requestType}-form`}
       variants={formVariants}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
+      initial='hidden'
+      animate='visible'
+      exit='exit'
       onSubmit={handleSubmit}
-      className={`flex flex-col items-center justify-around w-11/12 md:w-2/3 my-10 mx-auto p-5 md:p-10 bg-pink-100 rounded-lg shadow-2xl`}
+      className={`flex flex-col items-center justify-around w-11/12 md:w-2/3 my-10 mx-auto p-5 md:p-10 ${formBgColor} rounded-lg shadow-2xl`}
     >
-      <div className="w-full md:w-5/6 flex flex-col justify-center items-center mx-auto my-3">
+      <div className='w-full md:w-5/6 flex flex-col justify-center items-center mx-auto my-3'>
         <input
-          type="text"
-          placeholder="Name"
+          type='text'
+          placeholder='Name'
           value={name}
           onChange={handleNameChange}
           className={`h-10 md:h-12 border-2 ${
@@ -336,15 +345,15 @@ function ContactPage() {
           } rounded-lg px-5 text-xl md:text-2xl w-full`}
         />
         {entryError && name === "" && (
-          <p className="text-md md:text-lg text-red-600">
+          <p className='text-md md:text-lg text-red-600'>
             Name cannot be blank
           </p>
         )}
       </div>
-      <div className="w-full md:w-5/6 flex flex-col justify-center items-center mx-auto my-3">
+      <div className='w-full md:w-5/6 flex flex-col justify-center items-center mx-auto my-3'>
         <input
-          type="email"
-          placeholder="Email"
+          type='email'
+          placeholder='Email'
           value={email}
           onChange={handleEmailChange}
           className={`h-10 md:h-12 border-2 ${
@@ -354,13 +363,13 @@ function ContactPage() {
           } rounded-lg px-5 text-xl md:text-2xl w-full`}
         />
         {entryError && !email.match(regExpEmail) && (
-          <p className="text-md md:text-lg text-red-600">Enter a valid Email</p>
+          <p className='text-md md:text-lg text-red-600'>Enter a valid Email</p>
         )}
       </div>
-      <div className="w-full md:w-5/6 flex flex-col justify-center items-center mx-auto my-3">
+      <div className='w-full md:w-5/6 flex flex-col justify-center items-center mx-auto my-3'>
         <input
-          type="text"
-          placeholder="Phone Number"
+          type='text'
+          placeholder='Phone Number'
           value={phone}
           onChange={handlePhoneChange}
           className={`h-10 md:h-12 border-2 ${
@@ -370,7 +379,7 @@ function ContactPage() {
           } rounded-lg px-5 text-xl md:text-2xl w-full`}
         />
         {entryError && !phone.match(regExpPhone) && (
-          <p className="text-md md:text-lg text-red-600">
+          <p className='text-md md:text-lg text-red-600'>
             Valid Phone Number Formats:
             <br />
             XXXXXXXXXX
@@ -383,9 +392,9 @@ function ContactPage() {
           </p>
         )}
       </div>
-      <div className="w-full md:w-5/6 flex flex-col justify-center items-center mx-auto my-3">
+      <div className='w-full md:w-5/6 flex flex-col justify-center items-center mx-auto my-3'>
         <textarea
-          placeholder="Reason for getting in touch"
+          placeholder='Reason for getting in touch'
           value={reason}
           onChange={handleReasonChange}
           className={`h-10 md:h-12 border-2 ${
@@ -395,17 +404,17 @@ function ContactPage() {
           } rounded-lg p-5 text-xl md:text-2xl w-full h-96 md:h-64 `}
         />
         {entryError && !reason.match(regExpReason) && (
-          <p className="text-md md:text-lg text-red-600">
+          <p className='text-md md:text-lg text-red-600'>
             Enter at least one word
           </p>
         )}
       </div>
 
-      <Button primary className="mt-10 text-lg md:text-xl">
+      <Button primary className='mt-10 text-lg md:text-xl'>
         Submit
       </Button>
       {submitted && !entryError && (
-        <p className="text-lg md:text-xl mt-5 text-emerald-900">
+        <p className='text-lg md:text-xl mt-5 text-emerald-900'>
           Thank you! I'll be in touch soon!
         </p>
       )}
@@ -416,10 +425,10 @@ function ContactPage() {
     <motion.h3
       key={`${requestType}-header`}
       variants={formVariants}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
-      className="text-3xl md:text-4xl text-center text-zinc-700 font-bold mt-10"
+      initial='hidden'
+      animate='visible'
+      exit='exit'
+      className={`text-3xl md:text-4xl text-center ${headingColor} font-bold mt-10`}
     >
       Begin your therapeutic journey
     </motion.h3>
@@ -428,10 +437,10 @@ function ContactPage() {
     <motion.h3
       key={`${requestType}-header`}
       variants={formVariants}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
-      className="text-3xl md:text-4xl text-center text-zinc-700 font-bold mt-10"
+      initial='hidden'
+      animate='visible'
+      exit='exit'
+      className={`text-3xl md:text-4xl text-center ${headingColor} font-bold mt-10`}
     >
       Let's make a difference together
     </motion.h3>
@@ -440,19 +449,19 @@ function ContactPage() {
   return (
     <motion.div
       variants={sectionVariants}
-      className="flex flex-col bg-stone-50"
+      className='flex flex-col bg-stone-50'
     >
-      <div className="py-5 w-full md:w-1/4 rounded-lg mx-auto mt-5 flex flex-col items-center justify-around">
-        <p className="my-3 text-xl md:text-2xl text-zinc-600">
+      <div className='py-5 w-full md:w-1/4 rounded-lg mx-auto mt-5 flex flex-col items-center justify-around'>
+        <p className={`my-3 text-xl md:text-2xl ${textColor}`}>
           What do you want to get in touch for?
         </p>
-        <div className="flex flex-col md:flex-row items-center justify-center my-3 w-full">
+        <div className='flex flex-col md:flex-row items-center justify-center my-3 w-full'>
           <span
             className={`p-3 ${
               requestType === "Therapy"
-                ? "bg-pink-200 border-2 border-pink-300"
-                : "bg-pink-100"
-            } text-xl md:text-2xl cursor-pointer rounded-lg w-3/5 text-center md:w-fit md:mr-3 text-zinc-600`}
+                ? `${optionBgColorSelected} border-2 ${borderColor}`
+                : optionBgColor
+            } text-xl md:text-2xl cursor-pointer rounded-lg w-3/5 text-center md:w-fit md:mr-3 ${textColor}`}
             onClick={() => {
               setRequestType("Therapy");
             }}
@@ -462,9 +471,9 @@ function ContactPage() {
           <span
             className={`p-3 ${
               requestType === "Collaboration"
-                ? "bg-pink-200 border-2 border-pink-300"
-                : "bg-pink-100"
-            } text-xl md:text-2xl cursor-pointer rounded-lg w-3/5 text-center mt-3 md:mt-0 md:w-fit text-zinc-600`}
+                ? `${optionBgColorSelected} border-2 ${borderColor}`
+                : optionBgColor
+            } text-xl md:text-2xl cursor-pointer rounded-lg w-3/5 text-center mt-3 md:mt-0 md:w-fit ${textColor}`}
             onClick={() => {
               setRequestType("Collaboration");
             }}
@@ -473,7 +482,7 @@ function ContactPage() {
           </span>
         </div>
       </div>
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode='wait'>
         {requestType === "Therapy" ? therapyHeader : collaborationHeader}
         {requestType === "Therapy" ? therapyForm : collaborationForm}
       </AnimatePresence>
