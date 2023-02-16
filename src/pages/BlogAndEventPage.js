@@ -25,7 +25,7 @@ function BlogAndEventPage() {
       className='flex flex-col bg-stone-50'
     >
       <h3
-        className={`text-3xl md:text-4xl text-center ${headingColor} font-bold mt-10`}
+        className={`text-2xl md:text-3xl text-center ${headingColor} font-bold mt-10`}
       >
         Blogs and Events
       </h3>

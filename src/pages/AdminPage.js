@@ -38,10 +38,10 @@ function AdminPage() {
     };
   }, [admin, navigate]);
 
-  // const logGoogleUser = async () => {
-  //   const { user } = await signInWithGooglePopup();
-  //   console.log(user);
-  // };
+  const logGoogleUser = async () => {
+    const { user } = await signInWithGooglePopup();
+    console.log(user);
+  };
 
   const adminContent = (
     <motion.div
@@ -144,9 +144,9 @@ function AdminPage() {
           </p>
         )}
       </form>
-      {/* <Button secondary onClick={logGoogleUser} className='mt-5 w-fit mx-auto'>
+      <Button secondary onClick={logGoogleUser} className='mt-5 w-fit mx-auto'>
         Sign in with Google
-      </Button> */}
+      </Button>
     </div>
   );
 

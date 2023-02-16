@@ -428,7 +428,7 @@ function ContactPage() {
       initial='hidden'
       animate='visible'
       exit='exit'
-      className={`text-3xl md:text-4xl text-center ${headingColor} font-bold mt-10`}
+      className={`text-xl md:text-3xl text-center ${headingColor} font-bold mt-10`}
     >
       Begin your therapeutic journey
     </motion.h3>
@@ -440,7 +440,7 @@ function ContactPage() {
       initial='hidden'
       animate='visible'
       exit='exit'
-      className={`text-3xl md:text-4xl text-center ${headingColor} font-bold mt-10`}
+      className={`text-xl md:text-3xl text-center ${headingColor} font-bold mt-10`}
     >
       Let's make a difference together
     </motion.h3>

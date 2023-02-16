@@ -33,38 +33,38 @@ function HomePage() {
             <img
               src={ProfilePic}
               alt='Subhangi More, Clinical Therapist'
-              className='h-72 mb-10 md:w-96 md:h-auto'
+              className='h-72 my-10 md:w-96 md:h-auto'
             />
-            <div className='md:w-2/3 p-5 md:ml-5'>
+            <div className='md:w-2/3 p-5 md:ml-5 flex flex-col justify-end items-center'>
               <h3
-                className={`text-3xl md:text-4xl ${headingColor} my-5 text-center home-and-header md:leading-normal`}
+                className={`text-2xl md:text-3xl ${headingColor} my-5 text-center home-and-header md:leading-normal`}
               >
                 "When we talk about our feelings, they become less overwhelming,
                 less upsetting & less scary"
               </h3>
               <h4
-                className={`text-2xl md:text-3xl ${textColor} mb-5 text-right home-and-header`}
+                className={`text-xl md:text-2xl ${textColor} mb-5 text-center home-and-header`}
               >
                 - Fred Rogers
               </h4>
+              <Button
+                primary
+                className='mx-auto md:text-2xl mt-32'
+                onClick={() => {
+                  navigate("/contact");
+                }}
+              >
+                Work with me
+              </Button>
             </div>
           </div>
-          <Button
-            primary
-            className='my-5 md:text-2xl'
-            onClick={() => {
-              navigate("/contact");
-            }}
-          >
-            Work with me
-          </Button>
         </motion.section>
         <motion.section
           variants={sectionVariants}
           className='flex flex-col items-center justify-between bg-transparent p-5 md:p-10'
         >
           <h4
-            className={`text-2xl md:text-3xl my-5 font-bold w-5/6 md:w-3/5 text-left ${headingColor}`}
+            className={`text-xl md:text-2xl mt-5 mb-3 font-bold w-5/6 md:w-3/5 text-left ${headingColor}`}
           >
             Know my therapeutic approach
           </h4>
@@ -78,9 +78,9 @@ function HomePage() {
             needs and their presenting concerns.
           </p>
           <h4
-            className={`text-2xl md:text-3xl my-5 font-bold w-5/6 md:w-3/5 text-left ${headingColor}`}
+            className={`text-xl md:text-2xl mt-5 mb-3 font-bold w-5/6 md:w-3/5 text-left ${headingColor}`}
           >
-            Where I Work
+            Where I work
           </h4>
           <p
             className={`text-lg md:text-2xl w-5/6 md:w-3/5 text-left md:text-justify ${textColor} mb-3`}
@@ -90,9 +90,9 @@ function HomePage() {
             offline in Dhanbad, Jharkhand.
           </p>
           <h4
-            className={`text-2xl md:text-3xl my-5 font-bold w-5/6 md:w-3/5 text-left ${headingColor}`}
+            className={`text-xl md:text-2xl mt-5 mb-3 font-bold w-5/6 md:w-3/5 text-left ${headingColor}`}
           >
-            About Therapy
+            About therapy
           </h4>
           <p
             className={`text-lg md:text-2xl w-5/6 md:w-3/5 text-left md:text-justify ${textColor} mb-3`}

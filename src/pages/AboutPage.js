@@ -52,9 +52,9 @@ function AboutPage() {
           />
           <div className='md:basis-2/3 md:mx-10 flex flex-col justify-start items-start md:px-10 my-5'>
             <h4
-              className={`text-xl md:text-3xl font-bold mt-5 ${headingColor}`}
+              className={`text-xl md:text-2xl font-bold mt-5 ${headingColor}`}
             >
-              About Me
+              About me
             </h4>
             <p
               className={`text-lg md:text-2xl text-left md:text-justif ${textColor}`}
@@ -73,9 +73,9 @@ function AboutPage() {
               <br />
             </p>
             <h4
-              className={`text-xl md:text-3xl font-bold mt-5 md:mt-16 ${headingColor}`}
+              className={`text-xl md:text-2xl font-bold mt-5 md:mt-16 ${headingColor}`}
             >
-              My Qualifications
+              My qualifications
             </h4>
             <ul
               className={`text-lg md:text-2xl list-disc list-inside ${textColor}`}
@@ -101,7 +101,7 @@ function AboutPage() {
           </div>
         </div>
         <div className='flex flex-col w-5/6 md:w-auto my-5 md:mx-48'>
-          <h4 className={`text-xl md:text-3xl font-bold mb-2 ${headingColor}`}>
+          <h4 className={`text-xl md:text-2xl font-bold mb-2 ${headingColor}`}>
             What I would like you to know
           </h4>
           <p className='text-lg md:text-2xl text-left md:text-justify mb-5 text-zinc-600'>
@@ -112,8 +112,8 @@ function AboutPage() {
             no hierarchy or a position of authority. Clients know better about
             their lives and it’s a privilege to learn about their inner worlds.
           </p>
-          <h4 className={`text-xl md:text-3xl font-bold mb-2 ${headingColor}`}>
-            My Work
+          <h4 className={`text-xl md:text-2xl font-bold mb-2 ${headingColor}`}>
+            My work
           </h4>
           <p
             className={`text-lg md:text-2xl text-left md:text-justify mb-5 ${textColor}`}
@@ -123,8 +123,8 @@ function AboutPage() {
             I have worked with helplines, rehab centers and various non-profit
             organizations before I moved into private practice.{" "}
           </p>
-          <h4 className={`text-xl md:text-3xl font-bold mb-2 ${headingColor}`}>
-            Outside Work
+          <h4 className={`text-xl md:text-2xl font-bold mb-2 ${headingColor}`}>
+            Outside work
           </h4>
           <p
             className={`text-lg md:text-2xl text-left md:text-justify mb-5 ${textColor}`}
@@ -132,7 +132,7 @@ function AboutPage() {
             Outside of work, you will find me around water, art, cycling and
             netflix.
           </p>
-          <h4 className={`text-xl md:text-3xl font-bold mb-2 ${headingColor}`}>
+          <h4 className={`text-xl md:text-2xl font-bold mb-2 ${headingColor}`}>
             About Unbottled Emotions
           </h4>
           <p
@@ -153,7 +153,7 @@ function AboutPage() {
         className='bg-transparent flex flex-col items-center justify-between pt-5 md:mx-24'
       >
         <h3
-          className={`text-3xl md:text-4xl my-5 md:my-10 font-bold ${headingColor}`}
+          className={`text-2xl md:text-3xl my-5 md:my-10 font-bold ${headingColor}`}
         >
           Services
         </h3>
