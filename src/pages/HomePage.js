@@ -33,7 +33,7 @@ function HomePage() {
             <img
               src={ProfilePic}
               alt='Subhangi More, Clinical Therapist'
-              className='h-72 my-10 md:w-96 md:h-auto'
+              className='h-72 mb-10 md:w-96 md:h-auto'
             />
             <div className='md:w-2/3 p-5 md:ml-5 flex flex-col justify-end items-center'>
               <h3

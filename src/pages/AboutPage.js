@@ -48,19 +48,21 @@ function AboutPage() {
           <img
             src={ProfilePic}
             alt='Shubhangi More, Therapist'
-            className='md:basis-1/3 w-full md:w-[28rem] xl:w-[32rem] md:mb-10 h-fit'
+            className='md:basis-1/3 w-full md:w-[28rem] xl:w-[32rem] md:my-10 h-fit'
           />
           <div className='md:basis-2/3 md:mx-10 flex flex-col justify-start items-start md:px-10 my-5'>
             <h4
-              className={`text-xl md:text-2xl font-bold mt-5 ${headingColor}`}
+              className={`text-xl md:text-2xl font-bold mt-10 mb-3 ${headingColor} mx-auto`}
             >
               About me
             </h4>
             <p
               className={`text-lg md:text-2xl text-left md:text-justif ${textColor}`}
             >
-              Hi, I’m Shubhangi More (she/her), a Mental health therapist. I
-              have a Master’s of Science degree in Counseling Psychology. I’m
+              <span className='font-bold-inline'>
+                Hi, I’m Shubhangi More (she/her), a Mental health therapist.
+              </span>{" "}
+              I have a Master’s of Science degree in Counseling Psychology. I’m
               also trained to work with couples, family and LGBTQ clientele. The
               ability to hold space for someone is what excites and scares me at
               the same time. <br /> <br />A professor once told me,
@@ -73,7 +75,7 @@ function AboutPage() {
               <br />
             </p>
             <h4
-              className={`text-xl md:text-2xl font-bold mt-5 md:mt-16 ${headingColor}`}
+              className={`text-xl md:text-2xl font-bold mt-5 md:mt-16 ${headingColor} mx-auto`}
             >
               My qualifications
             </h4>
@@ -100,7 +102,7 @@ function AboutPage() {
             </ul>
           </div>
         </div>
-        <div className='flex flex-col w-5/6 md:w-auto my-5 md:mx-48'>
+        <div className='flex flex-col w-5/6 md:w-auto mb-5 md:mx-48'>
           <h4 className={`text-xl md:text-2xl font-bold mb-2 ${headingColor}`}>
             What I would like you to know
           </h4>

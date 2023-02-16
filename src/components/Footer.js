@@ -31,12 +31,12 @@ function Footer({ routes }) {
         <div className='md:h-full md:w-1/4 mx-10 flex flex-col justify-around items-center my-5'>
           <div className='w-full'>
             <h5
-              className={`font-bold ${textColor} my-3 text-center text-xl md:text-2xl`}
+              className={`font-bold ${textColor} my-3 text-center text-lg md:text-xl`}
             >
               Quick Links
             </h5>
           </div>
-          <div className='w-full h-full flex flex-col md:flex-wrap justify-around text-lg md:text-xl items-center'>
+          <div className='w-full h-full flex flex-col md:flex-wrap justify-around text-md md:text-lg items-center'>
             {routes.map((route, index) => {
               return (
                 <Link to={route.path} key={index} className='my-2'>
@@ -48,7 +48,7 @@ function Footer({ routes }) {
         </div>
         <div className='md:w-1/4 flex flex-col justify-around mx-10 my-5'>
           <h5
-            className={`font-bold ${textColor} my-3 text-center text-xl md:text-2xl`}
+            className={`font-bold ${textColor} my-3 text-center text-lg md:text-xl`}
           >
             Follow me on Social Media:
           </h5>
@@ -68,15 +68,15 @@ function Footer({ routes }) {
         </div>
         <div className='flex flex-col items-center justify-around mx-10 md:w-1/4 my-5'>
           <h5
-            className={`font-bold ${textColor} my-3 text-center text-xl md:text-2xl`}
+            className={`font-bold ${textColor} my-3 text-center text-lg md:text-xl`}
           >
             Contact Me:
           </h5>
-          <div className='flex flex-row justify-start text-lg md:text-xl items-center my-1'>
+          <div className='flex flex-row justify-start text-md md:text-lg items-center my-1'>
             <AiFillPhone className=' mr-3' />
             +91-7992286410
           </div>
-          <div className='flex flex-row justify-start text-lg md:text-xl items-center my-1'>
+          <div className='flex flex-row justify-start text-md md:text-lg items-center my-1'>
             <AiOutlineMail className=' mr-3' />
             shubhangi.therapist@pm.me
           </div>

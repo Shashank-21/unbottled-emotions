@@ -29,7 +29,7 @@ function NavigataionBar({ routes }) {
       animate='visible'
       className={`hidden md:flex md:flex-row md:justify-between md:items-center md:h-24 ${headerBgColor} ${textColor} shadow-xl home-and-header`}
     >
-      <p className={`md:text-3xl ${textColor} w-fit brand ml-10`}>
+      <p className={`md:text-3xl ${textColor} w-fit brand ml-10 uppercase`}>
         Unbottled Emotions
       </p>
 
@@ -41,8 +41,8 @@ function NavigataionBar({ routes }) {
               to={route.path}
               className={({ isActive }) =>
                 isActive
-                  ? `mx-3 p-3 font-bold text-lg ${navActiveColor} border-b-4 ${navActiveBorderColor}`
-                  : `mx-3 p-3 text-md ${headingColor}`
+                  ? `mx-3 p-3 font-bold text-lg ${navActiveColor} uppercase border-b-4 ${navActiveBorderColor}`
+                  : `mx-3 p-3 text-md header ${headingColor} uppercase`
               }
             >
               {route.name}

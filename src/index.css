@@ -74,8 +74,12 @@ html {
     font-family: 'Libre Caslon Bold';
   }
 
+  .header{
+    text-transform: uppercase;
+  }
+  
   .brand {
-    font-family: 'Libre Caslon Bold';
+    font-family: 'Butler Bold';
   }
 
   input[type='textarea']::placeholder{

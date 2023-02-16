@@ -59,7 +59,7 @@ function NavigationPage() {
       <MobileNavigataionBar routes={routes} />
       {currentLocation.pathname !== "/admin" && (
         <div
-          className={`w-full text-center text-2xl md:text-3xl font-bold-inline ${textColor} bg-stone-50 py-3`}
+          className={`w-full text-center text-xl md:text-2xl font-bold-inline ${textColor} brand bg-stone-50 py-3 my-10`}
         >
           Shubhangi More, Mental Health Therapist
         </div>
