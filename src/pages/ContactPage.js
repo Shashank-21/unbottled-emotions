@@ -286,7 +286,32 @@ function ContactPage() {
           <p className='text-md md:text-lg text-red-600'>Enter a valid age</p>
         )}
       </div>
-
+      <div className='w-full md:w-5/6 flex flex-col justify-center items-center mx-auto my-3'>
+        <input
+          type='text'
+          placeholder='Phone Number'
+          value={phone}
+          onChange={handlePhoneChange}
+          className={`h-10 md:h-12 border-2 ${
+            entryError && !phone.match(regExpPhone)
+              ? "border-red-600"
+              : "border-zinc-400"
+          } rounded-lg px-5 text-xl md:text-2xl w-full`}
+        />
+        {entryError && !phone.match(regExpPhone) && (
+          <p className='text-md md:text-lg text-red-600'>
+            Valid Phone Number Formats:
+            <br />
+            XXXXXXXXXX
+            <br />
+            [+Country Code]-XXXXXXXXXX
+            <br />
+            [+Country Code]-XXX-XXX-XXXX
+            <br />
+            [+Country Code]-(XXX)-XXX-XXXX
+          </p>
+        )}
+      </div>
       <RadioInput
         question={pronouns}
         onInputChange={handlePronounsChange}

@@ -51,11 +51,6 @@ function AboutPage() {
             className='md:basis-1/3 w-full md:w-[28rem] xl:w-[32rem] md:my-10 h-fit'
           />
           <div className='md:basis-2/3 md:mx-10 flex flex-col justify-start items-start md:px-10 my-5'>
-            <h4
-              className={`text-xl md:text-2xl font-bold mt-10 mb-3 ${headingColor} mx-auto`}
-            >
-              About me
-            </h4>
             <p
               className={`text-lg md:text-2xl text-left md:text-justif ${textColor}`}
             >
