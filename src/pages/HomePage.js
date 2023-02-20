@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
-import { motion, MotionConfig } from "framer-motion";
+import { motion } from "framer-motion";
 
 import ProfilePic from "../images/christina-wocintechchat-com-0Zx1bDv5BNY-unsplash.jpg";
 import { useSelector } from "react-redux";
@@ -23,92 +23,90 @@ function HomePage() {
   const { headingColor, textColor } = useSelector((state) => state.color);
 
   return (
-    <MotionConfig transition={{ delay: 0.5 }}>
-      <motion.div className='bg-stone-50'>
-        <motion.section
-          variants={sectionVariants}
-          className='flex flex-col items-center justify-center bg-transparent'
-        >
-          <div className='flex flex-col md:flex-row md:justify-around items-center md:w-4/5'>
-            <img
-              src={ProfilePic}
-              alt='Subhangi More, Clinical Therapist'
-              className='h-72 mb-10 md:w-96 md:h-auto'
-            />
-            <div className='md:w-2/3 p-5 md:ml-5 flex flex-col justify-end items-center'>
-              <h3
-                className={`text-2xl md:text-3xl ${headingColor} my-5 text-center home-and-header md:leading-normal`}
-              >
-                "When we talk about our feelings, they become less overwhelming,
-                less upsetting & less scary"
-              </h3>
-              <h4
-                className={`text-xl md:text-2xl ${textColor} mb-5 text-center home-and-header`}
-              >
-                - Fred Rogers
-              </h4>
-              <Button
-                primary
-                className='mx-auto md:text-2xl mt-32'
-                onClick={() => {
-                  navigate("/contact");
-                }}
-              >
-                Work with me
-              </Button>
-            </div>
+    <motion.div className='bg-stone-50'>
+      <motion.section
+        variants={sectionVariants}
+        className='flex flex-col items-center justify-center bg-transparent '
+      >
+        <div className='flex flex-col md:flex-row md:justify-around items-center md:w-4/5 md:h-auto'>
+          <img
+            src={ProfilePic}
+            alt='Subhangi More, Clinical Therapist'
+            className='h-72 md:w-96 md:h-auto'
+          />
+          <div className='md:w-2/3 px-5 md:ml-5 md:h-[36rem] flex flex-col justify-end items-center'>
+            <h3
+              className={`text-2xl md:text-3xl ${headingColor} my-5 text-center home-and-header md:leading-normal`}
+            >
+              "When we talk about our feelings, they become less overwhelming,
+              less upsetting & less scary"
+            </h3>
+            <h4
+              className={`text-xl md:text-2xl ${textColor} mb-5 text-center home-and-header`}
+            >
+              - Fred Rogers
+            </h4>
+            <Button
+              primary
+              className='mx-auto md:text-2xl mt-32'
+              onClick={() => {
+                navigate("/contact");
+              }}
+            >
+              Work with me
+            </Button>
           </div>
-        </motion.section>
-        <motion.section
-          variants={sectionVariants}
-          className='flex flex-col items-center justify-between bg-transparent p-5 md:p-10'
+        </div>
+      </motion.section>
+      <motion.section
+        variants={sectionVariants}
+        className='flex flex-col items-center justify-between bg-transparent p-5 md:p-10'
+      >
+        <h4
+          className={`text-xl md:text-2xl mt-5 mb-3 font-bold w-5/6 md:w-3/5 text-left ${headingColor}`}
         >
-          <h4
-            className={`text-xl md:text-2xl mt-5 mb-3 font-bold w-5/6 md:w-3/5 text-left ${headingColor}`}
-          >
-            Know my therapeutic approach
-          </h4>
-          <p
-            className={`text-lg md:text-2xl w-5/6 md:w-3/5 text-left md:text-justify ${textColor} mb-3`}
-          >
-            My go to approaches are Person centered therapy, Cognitive behavior
-            therapy, Queer affirmative therapy and Systemic family therapy. I
-            see clients from a feminist, trauma-informed and intersectional
-            lens. The therapeutic approach is decided based on what the client
-            needs and their presenting concerns.
-          </p>
-          <h4
-            className={`text-xl md:text-2xl mt-5 mb-3 font-bold w-5/6 md:w-3/5 text-left ${headingColor}`}
-          >
-            Where I work
-          </h4>
-          <p
-            className={`text-lg md:text-2xl w-5/6 md:w-3/5 text-left md:text-justify ${textColor} mb-3`}
-          >
-            I have a blended practice of offline and online. I work with clients
-            online from all over the world through call and video mode. And
-            offline in Dhanbad, Jharkhand.
-          </p>
-          <h4
-            className={`text-xl md:text-2xl mt-5 mb-3 font-bold w-5/6 md:w-3/5 text-left ${headingColor}`}
-          >
-            About therapy
-          </h4>
-          <p
-            className={`text-lg md:text-2xl w-5/6 md:w-3/5 text-left md:text-justify ${textColor} mb-3`}
-          >
-            Therapy is a safe and non judgemental space- you can share as little
-            to as much you’re comfortable. The sessions are for 60 minutes one
-            to one format and 75 minutes for couples and families. The client
-            decides the frequency and scheduling of all sessions based on time
-            and availability. It’s a collaborative process which means we work
-            together to understand your needs, goals and areas of work. The
-            therapist believes the client knows the best about their life. We
-            will be discussing the steps and process based on your goals.
-          </p>
-        </motion.section>
-      </motion.div>
-    </MotionConfig>
+          Know my therapeutic approach
+        </h4>
+        <p
+          className={`text-lg md:text-2xl w-5/6 md:w-3/5 text-left md:text-justify ${textColor} mb-3`}
+        >
+          My go to approaches are Person centered therapy, Cognitive behavior
+          therapy, Queer affirmative therapy and Systemic family therapy. I see
+          clients from a feminist, trauma-informed and intersectional lens. The
+          therapeutic approach is decided based on what the client needs and
+          their presenting concerns.
+        </p>
+        <h4
+          className={`text-xl md:text-2xl mt-5 mb-3 font-bold w-5/6 md:w-3/5 text-left ${headingColor}`}
+        >
+          Where I work
+        </h4>
+        <p
+          className={`text-lg md:text-2xl w-5/6 md:w-3/5 text-left md:text-justify ${textColor} mb-3`}
+        >
+          I have a blended practice of offline and online. I work with clients
+          online from all over the world through call and video mode. And
+          offline in Dhanbad, Jharkhand.
+        </p>
+        <h4
+          className={`text-xl md:text-2xl mt-5 mb-3 font-bold w-5/6 md:w-3/5 text-left ${headingColor}`}
+        >
+          About therapy
+        </h4>
+        <p
+          className={`text-lg md:text-2xl w-5/6 md:w-3/5 text-left md:text-justify ${textColor} mb-3`}
+        >
+          Therapy is a safe and non judgemental space- you can share as little
+          to as much you’re comfortable. The sessions are for 60 minutes one to
+          one format and 75 minutes for couples and families. The client decides
+          the frequency and scheduling of all sessions based on time and
+          availability. It’s a collaborative process which means we work
+          together to understand your needs, goals and areas of work. The
+          therapist believes the client knows the best about their life. We will
+          be discussing the steps and process based on your goals.
+        </p>
+      </motion.section>
+    </motion.div>
   );
 }
 

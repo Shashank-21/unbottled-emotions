@@ -9,13 +9,8 @@ const adminSlice = createSlice({
   reducers: {
     verifyUser(state, action) {
       return {
-        signedIn:
-          action.payload.username === process.env.REACT_APP_ADMIN_USERNAME &&
-          action.payload.password === process.env.REACT_APP_ADMIN_PASSWORD,
-        redirect: !(
-          action.payload.username === process.env.REACT_APP_ADMIN_USERNAME &&
-          action.payload.password === process.env.REACT_APP_ADMIN_PASSWORD
-        ),
+        signedIn: action.payload === "admin",
+        redirect: action.payload !== "admin",
       };
     },
   },

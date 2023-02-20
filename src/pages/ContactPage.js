@@ -51,6 +51,8 @@ function ContactPage() {
     textColor,
   } = useSelector((state) => state.color);
 
+  console.log(process.env.REACT_APP_SMTP_PASSWORD);
+
   const navigate = useNavigate();
   const regExpEmail = /.+@.+\..+/;
   const regExpPhone = /(\+[0-9]{1,3}-)?\(?[0-9]{3}\)?-?[0-9]{3}-?[0-9]{4}/;
@@ -191,6 +193,8 @@ function ContactPage() {
         !pronouns.selectedOption ||
         !concerns.selectedOptions.length ||
         !beenToTherapy.selectedOption ||
+        !phone.match(regExpPhone) ||
+        !email.match(regExpEmail) ||
         !profession.selectedOption)
     ) {
       setEntryError(true);
@@ -206,12 +210,14 @@ function ContactPage() {
       return;
     }
     let requestData;
+    let emailBody;
     if (requestType === "Therapy") {
       requestData = {
         id: nanoid(),
         type: requestType,
         name,
         age,
+        phone,
         beenToTherapy: beenToTherapy.selectedOption,
         profession: profession.selectedOption,
         pronouns: {
@@ -225,6 +231,21 @@ function ContactPage() {
       if (concerns.customOption) {
         requestData.concerns.push(concerns.customOption);
       }
+      emailBody = `
+      Name: ${name} (${
+        requestData.pronouns.customOption
+          ? requestData.pronouns.customOption
+          : requestData.pronouns.selectedOption
+      })\n
+      Phone number: ${phone}\n
+      Email:${email}\n
+      Profession: ${profession.selectedOption}\n\n
+
+      Has ${name} been to Therapy? ${requestData.beenToTherapy}\n\n
+
+      Concerns:\n
+      ${requestData.concerns.map((concern) => `${concern}\n`)}
+      `;
     } else if (requestType === "Collaboration") {
       requestData = {
         id: nanoid(),
@@ -234,6 +255,25 @@ function ContactPage() {
         phone,
         reason,
       };
+      emailBody = `
+      Name: ${name} 
+      Email: ${email} \n
+      Phone number: ${phone} \n \n
+      Reason: ${reason}`;
+    }
+    if (window.Email) {
+      window.Email.send({
+        Host: "smtp.elasticemail.com",
+        Port: 2525,
+        Username: "shashank@excelirate.net",
+        Password: process.env.REACT_APP_SMTP_PASSWORD,
+        To: "shashankbr21494@gmail.com",
+        From: "shashank@excelirate.net",
+        Subject: `Request for ${requestType}`,
+        Body: emailBody,
+      }).then((message) => {
+        console.log(message);
+      });
     }
 
     setSubmitted(true);
@@ -310,6 +350,22 @@ function ContactPage() {
             <br />
             [+Country Code]-(XXX)-XXX-XXXX
           </p>
+        )}
+      </div>
+      <div className='w-full md:w-5/6 flex flex-col justify-center items-center mx-auto my-3'>
+        <input
+          type='email'
+          placeholder='Email'
+          value={email}
+          onChange={handleEmailChange}
+          className={`h-10 md:h-12 border-2 ${
+            entryError && !email.match(regExpEmail)
+              ? "border-red-600"
+              : "border-zinc-400"
+          } rounded-lg px-5 text-xl md:text-2xl w-full`}
+        />
+        {entryError && !email.match(regExpEmail) && (
+          <p className='text-md md:text-lg text-red-600'>Enter a valid Email</p>
         )}
       </div>
       <RadioInput
@@ -453,7 +509,7 @@ function ContactPage() {
       initial='hidden'
       animate='visible'
       exit='exit'
-      className={`text-xl md:text-3xl text-center ${headingColor} font-bold mt-10`}
+      className={`text-xl md:text-3xl text-center ${headingColor} font-bold mt-5 md:mt-2`}
     >
       Begin your therapeutic journey
     </motion.h3>
@@ -465,7 +521,7 @@ function ContactPage() {
       initial='hidden'
       animate='visible'
       exit='exit'
-      className={`text-xl md:text-3xl text-center ${headingColor} font-bold mt-10`}
+      className={`text-xl md:text-3xl text-center ${headingColor} font-bold mt-5 md:mt-2`}
     >
       Let's make a difference together
     </motion.h3>
@@ -477,7 +533,7 @@ function ContactPage() {
       className='flex flex-col bg-stone-50'
     >
       <div className='py-5 w-full md:w-1/4 rounded-lg mx-auto mt-5 flex flex-col items-center justify-around'>
-        <p className={`my-3 text-xl md:text-2xl ${textColor}`}>
+        <p className={`my-3 text-lg md:text-xl ${textColor}`}>
           What do you want to get in touch for?
         </p>
         <div className='flex flex-col md:flex-row items-center justify-center my-3 w-full'>

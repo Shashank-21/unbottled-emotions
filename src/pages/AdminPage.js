@@ -9,10 +9,9 @@ import {
   signInWithGooglePopup,
   createUserDocumentFromAuth,
 } from "../utils/firebase-utils";
+import { FaGoogle } from "react-icons/fa";
 
 function AdminPage() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
   const [requestType, setRequestType] = useState("");
   const requests = useSelector((state) => state.requests);
   const admin = useSelector((state) => state.admin);
@@ -25,6 +24,8 @@ function AdminPage() {
     headingColor,
     textColor,
   } = useSelector((state) => state.color);
+
+  console.log(admin);
 
   const dispatch = useDispatch();
 
@@ -43,7 +44,11 @@ function AdminPage() {
 
   const logGoogleUser = async () => {
     const { user } = await signInWithGooglePopup();
-    await createUserDocumentFromAuth(user, { role: "admin" });
+    const userDetails = await createUserDocumentFromAuth(user, {
+      role: "unauthorised",
+    });
+    console.log(userDetails.data().role, user);
+    dispatch(verifyUser(userDetails.data().role));
   };
 
   const adminContent = (
@@ -52,14 +57,14 @@ function AdminPage() {
       transition={{
         layout: { duration: 1, type: "spring" },
       }}
-      className='min-h-screen bg-stone-50 flex flex-col'
+      className='min-h-screen bg-stone-50 flex flex-col pt-5 pb-16'
     >
       <h3
         className={`text-2xl md:text-3xl my-5 text-center font-bold ${headingColor}`}
       >
         Requests
       </h3>
-      <div className='py-5 w-full md:w-1/4 rounded-lg mx-auto flex flex-col items-center justify-around'>
+      <div className='w-full md:w-1/4 rounded-lg mx-auto flex flex-col items-center justify-around'>
         <p className={`my-3 text-md md:text-lg ${textColor}`}>
           Filter Requests by:
         </p>
@@ -106,55 +111,27 @@ function AdminPage() {
     </motion.div>
   );
 
-  const handleUsernameChange = (event) => {
-    setUsername(event.target.value);
-  };
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    dispatch(verifyUser({ username, password }));
-  };
-
-  const signInForm = (
+  const signInPage = (
     <div className='min-h-screen flex flex-col bg-stone-50'>
       <p className='text-center mt-64'>You need to sign in to get access</p>
-      <form
-        className='flex flex-col items-center justify-center'
-        onSubmit={handleSubmit}
+      <Button
+        secondary
+        onClick={logGoogleUser}
+        className='mt-5 w-fit mx-auto text-xl md:text-2xl flex flex-row justify-start'
       >
-        <input
-          type='text'
-          placeholder='Username'
-          value={username}
-          onChange={handleUsernameChange}
-          className='h-10 md:h-12 border border-zinc-900 rounded-lg px-5 text-xl md:text-2xl w-5/6 mt-5 md:w-1/6'
-        />
-        <input
-          type='password'
-          placeholder='Password'
-          value={password}
-          onChange={handlePasswordChange}
-          className='h-10 md:h-12 border border-zinc-900 rounded-lg px-5 text-xl md:text-2xl w-5/6 mt-5 mb-5 md:w-1/6'
-        />
-        <Button primary>Submit</Button>
-
-        {admin.redirect && (
-          <p className='mt-5 text-lg text-red-700'>
-            Sorry! You're not authorised to view this!
-          </p>
-        )}
-      </form>
-      <Button secondary onClick={logGoogleUser} className='mt-5 w-fit mx-auto'>
-        Sign in with Google
+        <FaGoogle className='mr-3' />
+        Sign in
       </Button>
+      {admin.redirect && (
+        <p className='text-red-700 text-xl mx-auto'>
+          You're not authorised to view this page!
+        </p>
+      )}
     </div>
   );
 
   if (!admin.signedIn) {
-    return signInForm;
+    return signInPage;
   } else {
     return adminContent;
   }

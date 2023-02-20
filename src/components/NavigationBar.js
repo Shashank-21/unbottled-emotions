@@ -41,8 +41,8 @@ function NavigataionBar({ routes }) {
               to={route.path}
               className={({ isActive }) =>
                 isActive
-                  ? `mx-3 font-bold text-md ${navActiveColor} uppercase border-b-4 ${navActiveBorderColor}`
-                  : `mx-3  text-sm header ${headingColor} uppercase`
+                  ? `mx-3 font-bold text-sm ${navActiveColor} uppercase border-b-4 ${navActiveBorderColor}`
+                  : `mx-3  text-xs header ${headingColor} uppercase`
               }
             >
               {route.name}
