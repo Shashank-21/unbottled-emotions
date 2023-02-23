@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import ServiceCard from "../components/ServiceCard";
-import ProfilePic from "../images/sofia-mQtcrK22CN8-unsplash.jpg";
+import ProfilePic from "../images/AboutPageImage.jpg";
 
 const sectionVariants = {
   hidden: {
