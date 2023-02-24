@@ -20,6 +20,7 @@ function MobileNavigataionBar({ routes }) {
     headingColor,
     linkBgColorSelected,
     navActiveColor,
+    brandColor,
   } = useSelector((state) => state.color);
 
   return (
@@ -30,7 +31,7 @@ function MobileNavigataionBar({ routes }) {
     >
       {isOpen ? (
         <div className='w-full h-12 flex flex-row justify-between px-5 py-10 items-center my-auto'>
-          <span className={`text-xl ${headingColor} home-and-header ml-1`}>
+          <span className={`text-xl ${brandColor} home-and-header ml-1`}>
             Unbottled Emotions
           </span>
 
@@ -41,7 +42,7 @@ function MobileNavigataionBar({ routes }) {
         </div>
       ) : (
         <div className='w-full flex flex-row justify-between p-5 items-center my-auto'>
-          <span className={`text-xl ${headingColor} home-and-header ml-1`}>
+          <span className={`text-xl ${brandColor} home-and-header ml-1`}>
             Unbottled Emotions
           </span>
 

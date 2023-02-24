@@ -4,7 +4,7 @@ const colorSlice = createSlice({
   name: "services",
   initialState: {
     headerBgColor: "bg-[#FFC2D1]",
-    footerBgColor: "bg-[#ffcad4]",
+    footerBgColor: "bg-[#FFC2D1]",
     cardBgColor: "bg-[#ffcad4]",
     borderColor: "border-pink-300",
     formBgColor: "bg-[#ffcad4]",
@@ -13,6 +13,7 @@ const colorSlice = createSlice({
     linkBgColorSelected: "bg-pink-300",
     textColor: "text-gray-600",
     headingColor: "text-gray-700",
+    brandColor: "text-gray-800",
     navActiveColor: "text-gray-800",
     navActiveBorderColor: "border-gray-800",
   },

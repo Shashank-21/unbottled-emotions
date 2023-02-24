@@ -19,6 +19,7 @@ function NavigataionBar({ routes }) {
     headingColor,
     navActiveColor,
     textColor,
+    brandColor,
     navActiveBorderColor,
   } = useSelector((state) => state.color);
 
@@ -29,7 +30,7 @@ function NavigataionBar({ routes }) {
       animate='visible'
       className={`hidden md:flex md:flex-row md:justify-between md:items-center md:h-24 ${headerBgColor} ${textColor} shadow-xl home-and-header`}
     >
-      <p className={`md:text-2xl ${textColor} w-fit brand ml-10 uppercase`}>
+      <p className={`md:text-2xl ${brandColor} w-fit brand ml-10 uppercase`}>
         Unbottled Emotions
       </p>
 
