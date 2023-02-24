@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import { motion } from "framer-motion";
 
-import ProfilePic from "../images/christina-wocintechchat-com-0Zx1bDv5BNY-unsplash.jpg";
+import ProfilePic from "../images/HomePageImage.jpg";
 import { useSelector } from "react-redux";
 
 const sectionVariants = {
