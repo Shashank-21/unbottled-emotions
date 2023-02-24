@@ -267,7 +267,7 @@ function ContactPage() {
         Port: 2525,
         Username: "shashank@excelirate.net",
         Password: process.env.REACT_APP_SMTP_PASSWORD,
-        To: "shashankbr21494@gmail.com",
+        To: "shubhangi.therapist@pm.me",
         From: "shashank@excelirate.net",
         Subject: `Request for ${requestType}`,
         Body: emailBody,
