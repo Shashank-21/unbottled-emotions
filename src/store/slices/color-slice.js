@@ -5,9 +5,9 @@ const colorSlice = createSlice({
   initialState: {
     headerBgColor: "bg-[#FFC2D1]",
     footerBgColor: "bg-[#FFC2D1]",
-    cardBgColor: "bg-[#ffcad4]",
+    cardBgColor: "bg-[#FFE5EC]",
     borderColor: "border-pink-300",
-    formBgColor: "bg-[#ffcad4]",
+    formBgColor: "bg-[#FFE5EC]",
     optionBgColor: "bg-pink-100",
     optionBgColorSelected: "bg-pink-200",
     linkBgColorSelected: "bg-pink-300",
