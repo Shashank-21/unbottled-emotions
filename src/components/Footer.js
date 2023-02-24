@@ -84,7 +84,7 @@ function Footer({ routes }) {
       </div>
       <div className='w-fit flex flex-row items-center mt-10 mb-5 md:my-0'>
         <AiOutlineCopyrightCircle className='text-sm md:text-md' />
-        <p className='ml-3 text-sm md:text-md'>Unbottled Emotions, 2023</p>
+        <p className='ml-1 text-sm md:text-md'>Unbottled Emotions</p>
       </div>
     </footer>
   );

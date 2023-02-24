@@ -48,7 +48,7 @@ function AboutPage() {
           <img
             src={ProfilePic}
             alt='Shubhangi More, Therapist'
-            className='w-full md:w-96 xl:w-[28rem] md:my-10 h-fit mx-auto'
+            className='w-full md:w-96 xl:w-[28rem] md:mb-10 h-fit mx-auto'
           />
           <div className='md:basis-2/3 md:mx-10 flex flex-col justify-start items-start md:px-10 my-5'>
             <p
