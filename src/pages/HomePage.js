@@ -36,19 +36,19 @@ function HomePage() {
           />
           <div className='md:w-2/3 px-5 md:ml-5 md:h-[36rem] flex flex-col justify-end items-center'>
             <h3
-              className={`text-2xl md:text-3xl ${headingColor} my-5 text-center home-and-header md:leading-normal`}
+              className={`text-2xl md:text-3xl ${headingColor} mt-10 text-center home-and-header md:leading-normal`}
             >
               "When we talk about our feelings, they become less overwhelming,
               less upsetting & less scary"
             </h3>
             <h4
-              className={`text-xl md:text-2xl ${textColor} mb-5 text-center home-and-header`}
+              className={`text-xl md:text-2xl ${textColor} mt-4 text-center home-and-header`}
             >
               - Fred Rogers
             </h4>
             <Button
               primary
-              className='mx-auto md:text-2xl mt-32'
+              className='mx-auto md:text-2xl mt-24'
               onClick={() => {
                 navigate("/contact");
               }}
