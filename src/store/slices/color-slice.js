@@ -3,8 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const colorSlice = createSlice({
   name: "services",
   initialState: {
-    headerBgColor: "bg-[#FFC2D1]",
-    footerBgColor: "bg-[#FFC2D1]",
+    headerBgColor: "bg-[#FFCBD8]",
+    footerBgColor: "bg-[#FFCBD8]",
     cardBgColor: "bg-[#FFE5EC]",
     borderColor: "border-pink-300",
     formBgColor: "bg-[#FFE5EC]",
