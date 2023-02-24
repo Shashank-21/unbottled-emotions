@@ -70,7 +70,7 @@ function AboutPage() {
               <br />
             </p>
             <h4
-              className={`text-xl md:text-2xl font-bold mt-5 ${headingColor} mx-auto`}
+              className={`text-xl md:text-2xl font-bold mt-5 ${headingColor}`}
             >
               My qualifications
             </h4>
@@ -99,7 +99,7 @@ function AboutPage() {
         </div>
         <div className='flex flex-col w-5/6 md:w-auto mb-5 md:mx-48'>
           <h4
-            className={`text-xl md:text-2xl font-bold mb-2 ${headingColor} text-center`}
+            className={`text-xl md:text-2xl font-bold md:mt-5 mb-2 ${headingColor} text-left`}
           >
             What I would like you to know
           </h4>
@@ -112,7 +112,7 @@ function AboutPage() {
             their lives and it’s a privilege to learn about their inner worlds.
           </p>
           <h4
-            className={`text-xl md:text-2xl font-bold mb-2 ${headingColor} text-center`}
+            className={`text-xl md:text-2xl font-bold md:mt-5 mb-2 ${headingColor} text-left`}
           >
             My work
           </h4>
@@ -125,7 +125,7 @@ function AboutPage() {
             organizations before I moved into private practice.{" "}
           </p>
           <h4
-            className={`text-xl md:text-2xl font-bold mb-2 ${headingColor} text-center`}
+            className={`text-xl md:text-2xl font-bold md:mt-5 mb-2 ${headingColor} text-left`}
           >
             Outside work
           </h4>
@@ -136,7 +136,7 @@ function AboutPage() {
             netflix.
           </p>
           <h4
-            className={`text-xl md:text-2xl font-bold mb-2 ${headingColor} text-center`}
+            className={`text-xl md:text-2xl font-bold md:mt-5 mb-2 ${headingColor} text-left`}
           >
             About Unbottled Emotions
           </h4>
@@ -157,9 +157,7 @@ function AboutPage() {
         variants={repeatSectionVariants}
         className='bg-transparent flex flex-col items-center justify-between pt-5 md:mx-24'
       >
-        <h3
-          className={`text-2xl md:text-3xl my-5 md:my-10 font-bold ${headingColor}`}
-        >
+        <h3 className={`text-2xl md:text-3xl my-5 font-bold ${headingColor}`}>
           Services
         </h3>
         <div className='flex flex-col items-center justify-between xl:flex-row md:justify-around w-full'>

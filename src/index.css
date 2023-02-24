@@ -86,4 +86,8 @@ html {
   input[type='textarea']::placeholder{
     vertical-align:top;
   }
+
+  button {
+    font-family: 'Classy Coiffeur Bold' ;
+  }
 }
