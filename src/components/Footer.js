@@ -25,28 +25,28 @@ function Footer({ routes }) {
   ];
   return (
     <footer
-      className={`flex flex-col items-center justify-between ${footerBgColor} ${textColor} py-5 shadow-inner home-and-header`}
+      className={`flex flex-col items-center justify-between ${footerBgColor} ${textColor} pb-5 shadow-inner home-and-header`}
     >
       <div className='md:h-full flex flex-col md:flex-row items-center md:items-start justify-between md:justify-around w-full'>
         <div className='md:h-full md:w-1/4 mx-10 flex flex-col justify-around items-center my-5'>
           <div className='w-full'>
             <h5
-              className={`font-bold ${textColor} my-3 text-center text-lg md:text-xl`}
+              className={`font-bold ${textColor} my-1 text-center text-lg md:text-xl`}
             >
               Quick Links
             </h5>
           </div>
-          <div className='w-full h-full flex flex-col md:flex-wrap justify-around text-md md:text-lg items-center'>
+          <div className='w-full h-full flex flex-col md:flex-wrap justify-around text-md items-center'>
             {routes.map((route, index) => {
               return (
-                <Link to={route.path} key={index} className='my-2'>
+                <Link to={route.path} key={index} className='my-1'>
                   {route.name}
                 </Link>
               );
             })}
           </div>
         </div>
-        <div className='md:w-1/4 flex flex-col justify-around mx-10 my-5'>
+        <div className='md:w-1/4 flex flex-col justify-around mx-10 my-5 md:my-1'>
           <h5
             className={`font-bold ${textColor} my-3 text-center text-lg md:text-xl`}
           >
@@ -66,7 +66,7 @@ function Footer({ routes }) {
             })}
           </div>
         </div>
-        <div className='flex flex-col items-center justify-around mx-10 md:w-1/4 my-5'>
+        <div className='flex flex-col items-center justify-around mx-10 md:w-1/4 my-3 md:my-1 '>
           <h5
             className={`font-bold ${textColor} my-3 text-center text-lg md:text-xl`}
           >
@@ -82,9 +82,9 @@ function Footer({ routes }) {
           </div>
         </div>
       </div>
-      <div className='w-fit flex flex-row items-center'>
-        <AiOutlineCopyrightCircle className='text-md' />
-        <p className='ml-3 text-md'>Unbottled Emotions, 2023</p>
+      <div className='w-fit flex flex-row items-center mt-10 mb-5 md:my-0'>
+        <AiOutlineCopyrightCircle className='text-sm md:text-md' />
+        <p className='ml-3 text-sm md:text-md'>Unbottled Emotions, 2023</p>
       </div>
     </footer>
   );

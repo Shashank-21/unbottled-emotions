@@ -75,7 +75,7 @@ function NavigationPage() {
           {currentOutlet}
         </motion.div>
       </AnimatePresence>
-      {currentLocation.pathname !== "/" && <Footer routes={routes} />}
+      <Footer routes={routes} />
     </main>
   );
 }
