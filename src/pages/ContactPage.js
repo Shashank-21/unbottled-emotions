@@ -51,8 +51,6 @@ function ContactPage() {
     textColor,
   } = useSelector((state) => state.color);
 
-  console.log(process.env.REACT_APP_SMTP_PASSWORD);
-
   const navigate = useNavigate();
   const regExpEmail = /.+@.+\..+/;
   const regExpPhone = /(\+[0-9]{1,3}-)?\(?[0-9]{3}\)?-?[0-9]{3}-?[0-9]{4}/;
@@ -60,6 +58,7 @@ function ContactPage() {
   const [requestType, setRequestType] = useState("Therapy");
   const [addRequest] = useUpdateRequestsMutation();
   const requests = useSelector((state) => state.requests);
+  console.log(requests);
   const [entryError, setEntryError] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -73,7 +72,7 @@ function ContactPage() {
   });
   const [pronouns, setPronouns] = useState({
     stem: "Pronouns",
-    options: ["She/him/hers", "He/him/his", "They/them/theirs", "Other"],
+    options: ["She/her/hers", "He/him/his", "They/them/theirs", "Other"],
     selectedOption: "",
     isOtherSelected: false,
   });
@@ -186,6 +185,10 @@ function ContactPage() {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (!requests.length) {
+      console.log("requests not loaded");
+      return;
+    }
     if (
       requestType === "Therapy" &&
       (!name ||
