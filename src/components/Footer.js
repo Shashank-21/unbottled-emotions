@@ -25,7 +25,7 @@ function Footer({ routes }) {
   ];
   return (
     <footer
-      className={`flex flex-col items-center justify-between ${footerBgColor} ${textColor} pb-5 shadow-inner home-and-header`}
+      className={`flex flex-col items-center justify-between ${footerBgColor} ${textColor} pb-5 md:pb-0 shadow-inner home-and-header`}
     >
       <div className='md:h-full flex flex-col md:flex-row items-center md:items-start justify-between md:justify-around w-full'>
         <div className='md:h-full md:w-1/4 mx-10 flex flex-col justify-around items-center my-5'>
@@ -46,7 +46,7 @@ function Footer({ routes }) {
             })}
           </div>
         </div>
-        <div className='md:w-1/4 flex flex-col justify-around mx-10 my-5 md:my-1'>
+        <div className='md:w-1/4 flex flex-col justify-around mx-10 my-5 md:my-0'>
           <h5
             className={`font-bold ${textColor} my-3 text-center text-lg md:text-xl`}
           >
@@ -65,8 +65,12 @@ function Footer({ routes }) {
               );
             })}
           </div>
+          <div className=' hidden w-fit md:flex md:flex-row md:items-center md:mx-auto md:mt-24'>
+            <AiOutlineCopyrightCircle className='text-sm md:text-md' />
+            <p className='ml-1 text-sm md:text-md'>Unbottled Emotions</p>
+          </div>
         </div>
-        <div className='flex flex-col items-center justify-around mx-10 md:w-1/4 my-3 md:my-1 '>
+        <div className='flex flex-col items-center justify-around mx-10 md:w-1/4 my-3 md:my-0 '>
           <h5
             className={`font-bold ${textColor} my-3 text-center text-lg md:text-xl`}
           >
@@ -82,7 +86,7 @@ function Footer({ routes }) {
           </div>
         </div>
       </div>
-      <div className='w-fit flex flex-row items-center mt-10 mb-5 md:my-0'>
+      <div className='w-fit flex flex-row items-center mt-10 mb-5 md:my-0 md:hidden'>
         <AiOutlineCopyrightCircle className='text-sm md:text-md' />
         <p className='ml-1 text-sm md:text-md'>Unbottled Emotions</p>
       </div>

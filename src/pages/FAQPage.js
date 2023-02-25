@@ -48,14 +48,13 @@ function FAQPage() {
         >
           Work with me
         </Button>
-
         <section className='flex flex-col items-center justify-between p-5 md:p-10'>
           <motion.h4
             layout
             transition={{
               layout: { type: "spring", damping: 25, stiffness: 100 },
             }}
-            className={`text-2xl md:text-3xl ${headingColor} my-10 text-center font-bold`}
+            className={`text-2xl md:text-3xl ${headingColor} mb-5 md:my-10 text-center font-bold`}
           >
             Testimonials
           </motion.h4>

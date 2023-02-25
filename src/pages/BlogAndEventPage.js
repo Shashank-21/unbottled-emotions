@@ -55,7 +55,7 @@ function BlogAndEventPage() {
           </li>
         </ul>
       </section>
-      <section className='bg-transparent flex flex-col items-center justify-between pb-10 mt-10'>
+      <section className='bg-transparent flex flex-col items-center justify-between pb-10 md:mt-10'>
         <h4
           className={`text-xl md:text-2xl font-bold mt-4 w-f5/6 md:w-3/5 ${headingColor} text-left`}
         >

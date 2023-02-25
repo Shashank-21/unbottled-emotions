@@ -12,7 +12,7 @@ const colorSlice = createSlice({
     optionBgColorSelected: "bg-[#FFCBD8]",
     linkBgColorSelected: "bg-[#FFB3C6]",
     textColor: "text-gray-600",
-    headingColor: "text-gray-700",
+    headingColor: "text-gray-800",
     brandColor: "text-gray-800",
     navActiveColor: "text-gray-800",
     navActiveBorderColor: "border-gray-800",

@@ -42,7 +42,7 @@ function AboutPage() {
     <motion.div className='bg-stone-50'>
       <motion.section
         variants={sectionVariants}
-        className='bg-transparent flex flex-col items-center justify-between pb-10'
+        className='bg-transparent flex flex-col items-center justify-between pb-5'
       >
         <div className='flex flex-col w-5/6'>
           <img
@@ -52,7 +52,7 @@ function AboutPage() {
           />
           <div className='md:basis-2/3 md:mx-10 flex flex-col justify-start items-start md:px-10 my-5'>
             <p
-              className={`text-lg md:text-2xl text-left md:text-justif ${textColor}`}
+              className={`text-lg md:text-[21px] text-left md:text-justif ${textColor}`}
             >
               <span className='font-bold-inline'>
                 Hi, I’m Shubhangi More (she/her), a Mental health therapist.
@@ -61,7 +61,7 @@ function AboutPage() {
               also trained to work with couples, family and LGBTQ clientele. The
               ability to hold space for someone is what excites and scares me at
               the same time. <br /> <br />A professor once told me,
-              <span className='text-lg md:text-2xl font-bold-inline'>
+              <span className='font-bold-inline'>
                 “You might be the first person in your client's life who is
                 hearing their side of the story.”
               </span>{" "}
@@ -75,7 +75,7 @@ function AboutPage() {
               My qualifications
             </h4>
             <ul
-              className={`text-lg md:text-2xl list-disc list-inside ${textColor}`}
+              className={`text-lg md:text-[21px] list-disc list-inside ${textColor}`}
             >
               <li className='my-3'>
                 MSc Counseling Psychology (Honours) from Montfort College,
@@ -97,13 +97,13 @@ function AboutPage() {
             </ul>
           </div>
         </div>
-        <div className='flex flex-col w-5/6 md:w-auto mb-5 md:mx-48'>
+        <div className='flex flex-col w-5/6 md:px-20 mb-5 md:mx-auto'>
           <h4
             className={`text-xl md:text-2xl font-bold md:mt-5 mb-2 ${headingColor} text-left`}
           >
             What I would like you to know
           </h4>
-          <p className='text-lg md:text-2xl text-left md:text-justify mb-5 text-zinc-600'>
+          <p className='text-lg md:text-[21px] text-left md:text-justify mb-5 text-zinc-600'>
             I’m trauma-informed and multi-cultural sensitive. I believe in an
             intersectional approach and how context and power plays a huge role
             in mental health. Personal is political. I also wish to build a
@@ -117,7 +117,7 @@ function AboutPage() {
             My work
           </h4>
           <p
-            className={`text-lg md:text-2xl text-left md:text-justify mb-5 ${textColor}`}
+            className={`text-lg md:text-[21px] text-left md:text-justify mb-5 ${textColor}`}
           >
             I’m based out of Dhanbad, Jharkhand, where I’m also working towards
             de-stigmatizing mental health in the rural population. In the past,
@@ -130,7 +130,7 @@ function AboutPage() {
             Outside work
           </h4>
           <p
-            className={`text-lg md:text-2xl text-left md:text-justify mb-5 ${textColor}`}
+            className={`text-lg md:text-[21px] text-left md:text-justify mb-5 ${textColor}`}
           >
             Outside of work, you will find me around water, art, cycling and
             netflix.
@@ -141,7 +141,7 @@ function AboutPage() {
             About Unbottled Emotions
           </h4>
           <p
-            className={`text-lg md:text-2xl text-left md:text-justify mb-5 ${textColor}`}
+            className={`text-lg md:text-[21px] text-left md:text-justify ${textColor}`}
           >
             I started out in the beginning of the pandemic in 2020. Unbottled
             emotions, an online mental health platform to eradicate stigma
@@ -155,9 +155,9 @@ function AboutPage() {
       </motion.section>
       <motion.section
         variants={repeatSectionVariants}
-        className='bg-transparent flex flex-col items-center justify-between pt-5 md:mx-24'
+        className='bg-transparent flex flex-col items-center justify-between md:mx-24'
       >
-        <h3 className={`text-2xl md:text-3xl my-5 font-bold ${headingColor}`}>
+        <h3 className={`text-2xl md:text-3xl mb-10 font-bold ${headingColor}`}>
           Services
         </h3>
         <div className='flex flex-col items-center justify-between xl:flex-row md:justify-around w-full'>
@@ -167,7 +167,7 @@ function AboutPage() {
         </div>
         <Button
           primary
-          className='my-10 md:text-2xl'
+          className='mb-10 md:text-2xl'
           onClick={() => {
             navigate("/contact");
           }}

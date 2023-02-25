@@ -8,7 +8,7 @@ function BlogDisplay({ blog }) {
   );
   return (
     <motion.div
-      className={`w-5/6 md:w-3/5 mt-10 mx-auto p-5 text-zinc-900 ${cardBgColor} rounded-lg shadow-xl flex flex-col justify-around`}
+      className={`w-5/6 md:w-3/5 mt-5 md:mt-10 mx-auto p-5 text-zinc-900 ${cardBgColor} rounded-lg shadow-xl flex flex-col justify-around`}
     >
       <h4
         className={`text-xl md:text-2xl font-bold w-full text-left ${headingColor}`}

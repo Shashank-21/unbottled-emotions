@@ -532,8 +532,8 @@ function ContactPage() {
       variants={sectionVariants}
       className='flex flex-col bg-stone-50'
     >
-      <div className='py-5 w-full md:w-1/4 rounded-lg mx-auto mt-5 flex flex-col items-center justify-around'>
-        <p className={`my-3 text-lg md:text-xl ${textColor}`}>
+      <div className='pb-5 w-full md:w-1/4 rounded-lg mx-auto flex flex-col items-center justify-around'>
+        <p className={`mb-3 text-lg md:text-xl ${textColor}`}>
           What do you want to get in touch for?
         </p>
         <div className='flex flex-col md:flex-row items-center justify-center my-3 w-full'>
