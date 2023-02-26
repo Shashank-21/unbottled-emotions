@@ -42,11 +42,11 @@ function App() {
   }, [dispatch, services, testimonials, faqs, requests]);
 
   const routeFromElements = createRoutesFromElements(
-    <Route path="/" element={<NavigationPage />}>
+    <Route path='/' element={<NavigationPage />}>
       <Route index element={<HomePage />} />
-      <Route path="about" element={<AboutPage />} />
-      <Route path="contact" element={<ContactPage />} />
-      <Route path="blogs">
+      <Route path='about' element={<AboutPage />} />
+      <Route path='contact' element={<ContactPage />} />
+      <Route path='blogs'>
         <Route index element={<BlogAndEventPage />} />
         {blogs.map((blog) => {
           return (
@@ -58,8 +58,8 @@ function App() {
           );
         })}
       </Route>
-      <Route path="faqs" element={<FAQPage />} />
-      <Route path="admin" element={<AdminPage />} />
+      <Route path='faqs' element={<FAQPage />} />
+      <Route path='admin' element={<AdminPage />} />
     </Route>
   );
 

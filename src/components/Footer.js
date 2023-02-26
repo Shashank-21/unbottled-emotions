@@ -46,9 +46,9 @@ function Footer({ routes }) {
             })}
           </div>
         </div>
-        <div className='md:w-1/4 flex flex-col justify-around mx-10 my-5 md:my-0'>
+        <div className='md:w-1/4 flex flex-col justify-around mx-10 my-5'>
           <h5
-            className={`font-bold ${textColor} my-3 text-center text-lg md:text-xl`}
+            className={`font-bold ${textColor} my-1 text-center text-lg md:text-xl`}
           >
             Follow me on Social Media:
           </h5>
@@ -70,9 +70,9 @@ function Footer({ routes }) {
             <p className='ml-1 text-sm md:text-md'>Unbottled Emotions</p>
           </div>
         </div>
-        <div className='flex flex-col items-center justify-around mx-10 md:w-1/4 my-3 md:my-0 '>
+        <div className='flex flex-col items-center justify-around mx-10 md:w-1/4 my-5'>
           <h5
-            className={`font-bold ${textColor} my-3 text-center text-lg md:text-xl`}
+            className={`font-bold ${textColor} my-1 text-center text-lg md:text-xl`}
           >
             Contact Me:
           </h5>
