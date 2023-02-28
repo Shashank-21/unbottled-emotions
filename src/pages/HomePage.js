@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import { motion } from "framer-motion";
-
+import TherapyIllustration from "../images/TherapyIllustration.png";
 import ProfilePic from "../images/HomePageImage.jpg";
 import { useSelector } from "react-redux";
 
@@ -105,6 +105,11 @@ function HomePage() {
           therapist believes the client knows the best about their life. We will
           be discussing the steps and process based on your goals.
         </p>
+        <img
+          src={TherapyIllustration}
+          alt='unwiding'
+          className='w-5/6 md:w-[36rem]'
+        />
       </motion.section>
     </motion.div>
   );

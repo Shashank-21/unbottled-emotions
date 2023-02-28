@@ -1,6 +1,8 @@
 import { useSelector } from "react-redux";
 import BlogDisplay from "../components/BlogDisplay";
 import { motion } from "framer-motion";
+import EventImage1 from "../images/EventImage1.jpg";
+import EventImage2 from "../images/EventImage2.jpg";
 
 const sectionVariants = {
   hidden: {
@@ -54,10 +56,22 @@ function BlogAndEventPage() {
             Self Acceptance for The Yellow Club- 2020 - Google Meet
           </li>
         </ul>
+        <div className='flex flex-col md:flex-row w-full md:w-4/5 mt-5 justify-around items-center'>
+          <img
+            src={EventImage1}
+            alt='Event 1'
+            className='w-5/6 md:w-2/5 h-auto'
+          />
+          <img
+            src={EventImage2}
+            alt='Event 2'
+            className='w-5/6 md:w-2/5 h-auto'
+          />
+        </div>
       </section>
       <section className='bg-transparent flex flex-col items-center justify-between pb-10 md:mt-10'>
         <h4
-          className={`text-xl md:text-2xl font-bold mt-4 w-f5/6 md:w-3/5 ${headingColor} text-left`}
+          className={`text-xl md:text-2xl font-bold w-5/6 md:w-3/5 ${headingColor} text-left`}
         >
           Blogs:
         </h4>
