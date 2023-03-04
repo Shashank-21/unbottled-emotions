@@ -21,7 +21,7 @@ function FAQCard({ faq, index }) {
       }}
       inital='hidden'
       animate='visible'
-      className={`w-5/6 md:w-2/3 ${cardBgColor} rounded-xl shadow-xl text-lg md:text-xl p-8 mb-10 ${headingColor} cursor-pointer`}
+      className={`w-5/6 md:w-3/5 ${cardBgColor} rounded-xl shadow-xl text-lg md:text-xl p-8 mb-10 ${headingColor} cursor-pointer`}
       onClick={handleClick}
     >
       <motion.div

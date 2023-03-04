@@ -35,7 +35,7 @@ function FAQPage() {
         variants={sectionVariants}
         className='flex flex-col md:flex-row items-center justify-start h-fit w-fit mb-5 md:mb-10'
       >
-        <img src={FAQIllustration} alt='QnA' className='w-48 h-auto' />
+        <img src={FAQIllustration} alt='QnA' className='w-72 h-auto' />
       </motion.div>
 
       <LayoutGroup>
