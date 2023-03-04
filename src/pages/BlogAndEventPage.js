@@ -26,7 +26,7 @@ function BlogAndEventPage() {
       variants={sectionVariants}
       className='flex flex-col bg-stone-50'
     >
-      <section className='bg-transparent flex flex-col items-start justify-between pb-10 mt-10 w-5/6 md:w-3/5 mx-auto'>
+      <section className='bg-transparent flex flex-col items-start justify-between pb-10 w-5/6 md:w-3/5 mx-auto'>
         <h4
           className={`text-xl md:text-2xl font-bold my-4 w-full text-left ${headingColor}`}
         >
