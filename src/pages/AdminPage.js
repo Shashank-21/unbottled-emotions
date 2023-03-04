@@ -45,7 +45,7 @@ function AdminPage() {
   const logGoogleUser = async () => {
     const { user } = await signInWithGooglePopup();
     const userDetails = await createUserDocumentFromAuth(user, {
-      role: "admin",
+      role: "unauthorised",
     });
     console.log(userDetails.data().role, user);
     dispatch(verifyUser(userDetails.data().role));
