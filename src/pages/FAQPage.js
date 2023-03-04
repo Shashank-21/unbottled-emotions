@@ -36,11 +36,6 @@ function FAQPage() {
         className='flex flex-col md:flex-row items-center justify-start h-fit w-fit mb-5 md:mb-10'
       >
         <img src={FAQIllustration} alt='QnA' className='w-36 h-auto' />
-        <h3
-          className={`text-2xl md:text-[1.625rem] ${headingColor} font-bold mt-3 md:ml-2`}
-        >
-          Frequently Asked Questions
-        </h3>
       </motion.div>
 
       <LayoutGroup>
