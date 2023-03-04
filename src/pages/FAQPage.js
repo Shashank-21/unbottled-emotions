@@ -60,7 +60,7 @@ function FAQPage() {
             <img
               src={TestimonialIllustration}
               alt='quotation marks'
-              className='w-12 md:w-24 h-auto rotate-180'
+              className='w-12 md:w-20 h-auto rotate-180'
             />
             <motion.h4
               layout
@@ -74,7 +74,7 @@ function FAQPage() {
             <img
               src={TestimonialIllustration}
               alt='quotation marks'
-              className='w-12 md:w-24 h-auto'
+              className='w-12 md:w-20 h-auto'
             />
           </motion.div>
 
