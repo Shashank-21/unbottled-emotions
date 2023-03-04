@@ -60,21 +60,21 @@ function FAQPage() {
             <img
               src={TestimonialIllustration}
               alt='quotation marks'
-              className='w-12 md:w-16 h-auto rotate-180'
+              className='w-12 md:w-24 h-auto rotate-180'
             />
             <motion.h4
               layout
               transition={{
                 layout: { type: "spring", damping: 25, stiffness: 100 },
               }}
-              className={`text-2xl md:text-3xl ${headingColor} text-center font-bold mx-3`}
+              className={`text-2xl md:text-4xl ${headingColor} text-center font-bold mx-3`}
             >
               Testimonials
             </motion.h4>
             <img
               src={TestimonialIllustration}
               alt='quotation marks'
-              className='w-12 md:w-16 h-auto'
+              className='w-12 md:w-24 h-auto'
             />
           </motion.div>
 
