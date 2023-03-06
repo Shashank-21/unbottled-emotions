@@ -14,6 +14,7 @@ import ContactPage from "./pages/ContactPage";
 import FAQPage from "./pages/FAQPage";
 import HomePage from "./pages/HomePage";
 import NavigationPage from "./pages/NavigationPage";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import {
   captureFAQs,
   captureRequests,
@@ -59,6 +60,7 @@ function App() {
         })}
       </Route>
       <Route path='faqs' element={<FAQPage />} />
+      <Route path='privacy-policy' element={<PrivacyPolicyPage />} />
       <Route path='admin' element={<AdminPage />} />
     </Route>
   );

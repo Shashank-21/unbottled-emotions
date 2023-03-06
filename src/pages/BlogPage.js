@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import BlogDisplay from "../components/BlogDisplay";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 const sectionVariants = {
   hidden: {
@@ -18,6 +19,9 @@ const sectionVariants = {
 function BlogPage({ blog }) {
   const blogs = useSelector((state) => state.blogs);
   const { headingColor, textColor } = useSelector((state) => state.color);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   return (
     <motion.div variants={sectionVariants} className=' bg-stone-50 mx-auto'>
