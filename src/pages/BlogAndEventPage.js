@@ -32,7 +32,6 @@ function BlogAndEventPage() {
 
     fetchInstaPosts();
   }, []);
-  console.log(posts);
   const blogs = useSelector((state) => state.blogs);
   const { headingColor, textColor } = useSelector((state) => state.color);
 
