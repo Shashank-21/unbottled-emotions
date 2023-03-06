@@ -3,6 +3,8 @@ import BlogDisplay from "../components/BlogDisplay";
 import { motion } from "framer-motion";
 import EventImage1 from "../images/EventImage1.jpg";
 import EventImage2 from "../images/EventImage2.jpg";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const sectionVariants = {
   hidden: {
@@ -18,6 +20,18 @@ const sectionVariants = {
 };
 
 function BlogAndEventPage() {
+  const [posts, setPosts] = useState([]);
+  useEffect(() => {
+    async function fetchInstaPosts() {
+      const instaPostsData = await axios.get(
+        `https://graph.instagram.com/me/media?fields=id,media_type,media_url,username,timestamp&access_token=${process.env.REACT_APP_INSTAGRAM_ACCESS}`
+      );
+      setPosts(instaPostsData.data.data);
+    }
+
+    fetchInstaPosts();
+  }, [posts]);
+  console.log(posts);
   const blogs = useSelector((state) => state.blogs);
   const { headingColor, textColor } = useSelector((state) => state.color);
 
@@ -73,6 +87,13 @@ function BlogAndEventPage() {
         {blogs.map((blog) => {
           return <BlogDisplay blog={blog} key={blog.id} />;
         })}
+      </section>
+      <section className='my-5'>
+        <h4
+          className={`text-xl md:text-2xl font-bold w-5/6 md:w-3/5 ${headingColor} text-left`}
+        >
+          My Instagram Feed
+        </h4>
       </section>
     </motion.div>
   );

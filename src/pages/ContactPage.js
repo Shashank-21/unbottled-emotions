@@ -268,10 +268,10 @@ function ContactPage() {
       window.Email.send({
         Host: "smtp.elasticemail.com",
         Port: 2525,
-        Username: "shashank@excelirate.net",
+        Username: "moreshubhangi01@gmail.com",
         Password: process.env.REACT_APP_SMTP_PASSWORD,
         To: "shubhangi.therapist@pm.me",
-        From: "shashank@excelirate.net",
+        From: "moreshubhangi01@gmail.com",
         Subject: `Request for ${requestType}`,
         Body: emailBody,
       }).then((message) => {
