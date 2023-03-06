@@ -88,13 +88,13 @@ function BlogAndEventPage() {
           return <BlogDisplay blog={blog} key={blog.id} />;
         })}
       </section>
-      <section className='my-5'>
+      {/* <section className='my-5'>
         <h4
           className={`text-xl md:text-2xl font-bold w-5/6 md:w-3/5 ${headingColor} text-left`}
         >
           My Instagram Feed
         </h4>
-      </section>
+      </section> */}
     </motion.div>
   );
 }
