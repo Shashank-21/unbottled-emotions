@@ -20,6 +20,7 @@ const sectionVariants = {
 };
 
 function BlogAndEventPage() {
+  const [visible, setVisible] = useState(false);
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     async function fetchInstaPosts() {
@@ -30,7 +31,7 @@ function BlogAndEventPage() {
     }
 
     fetchInstaPosts();
-  }, [posts]);
+  }, []);
   console.log(posts);
   const blogs = useSelector((state) => state.blogs);
   const { headingColor, textColor } = useSelector((state) => state.color);
@@ -88,13 +89,37 @@ function BlogAndEventPage() {
           return <BlogDisplay blog={blog} key={blog.id} />;
         })}
       </section>
-      {/* <section className='my-5'>
+      <section className='my-5 flex flex-col items-center'>
         <h4
-          className={`text-xl md:text-2xl font-bold w-5/6 md:w-3/5 ${headingColor} text-left`}
+          className={`text-xl md:text-3xl font-bold w-5/6 md:w-2/3 ${headingColor} text-center my-5`}
         >
-          My Instagram Feed
+          Unbottled Emotions on Instagram
         </h4>
-      </section> */}
+        <div className='p-5 grid grid-cols-3 gap-3 w-full md:w-2/3'>
+          {posts
+            .filter((post) => post.media_type === "IMAGE")
+            .map((post, index) => (
+              <img
+                src={post.media_url}
+                alt={post.timestamp}
+                key={post.id}
+                className={`w-96 h-96 md:w-[28rem] md:h-[28rem] object-cover col-span-3 md:col-span-1 ${
+                  index > 5 ? (visible ? "" : "hidden") : ""
+                }`}
+              />
+            ))}
+        </div>
+        <p
+          className='w-full text-center text-xl cursor-pointer'
+          onClick={() => {
+            setVisible((v) => {
+              return !v;
+            });
+          }}
+        >
+          {visible ? "See Less" : "See More"}
+        </p>
+      </section>
     </motion.div>
   );
 }

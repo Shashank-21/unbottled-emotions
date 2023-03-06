@@ -1,6 +1,15 @@
+import axios from "axios";
 import { useSelector } from "react-redux";
+import Button from "../components/Button";
 
 function PrivacyPolicyPage() {
+  const getAccessToken = async () => {
+    const newAccessToken = await axios.get(
+      "https://graph.instagram.com/access_token?grant_type=ig_exchange_token&client_secret=f8c3923ee07487322754e97007a81751&access_token=IGQVJXcnJGZA25RNXRCNzE0ZAGRPblo3X00xZAFJYcTBDRXFHRXZASM3MxTlIzMFltdmNWM2N6ZADUzNEdVejBSRlMxal9HNGw0azU0NzJabFE4a3lHQlE1YXBkQ1ZA1QXNYSi1ob2ctNEVLbjlOR1UtUjcxSzE5TFNpS3dqaml3"
+    );
+    console.log(newAccessToken);
+  };
+
   const { headingColor, textColor } = useSelector((state) => state.color);
   return (
     <div className='flex flex-col items-center justify-between mb-0'>
@@ -114,6 +123,9 @@ function PrivacyPolicyPage() {
         If you have any questions or concerns about this Privacy Policy, please
         contact us at shubhangi.therapist@pm.me
       </p>
+      <Button primary onClick={getAccessToken}>
+        Get A T
+      </Button>
     </div>
   );
 }
