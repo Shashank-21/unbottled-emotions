@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const colorSlice = createSlice({
-  name: "services",
+  name: "color",
   initialState: {
     headerBgColor: "bg-[#FFCBD8]",
     footerBgColor: "bg-[#FFCBD8]",
