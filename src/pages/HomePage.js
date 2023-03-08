@@ -19,6 +19,7 @@ const sectionVariants = {
 };
 
 function HomePage() {
+  console.log(window.location);
   const navigate = useNavigate();
   const { headingColor, textColor } = useSelector((state) => state.color);
 
