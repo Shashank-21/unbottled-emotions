@@ -94,7 +94,7 @@ function BlogAndEventPage() {
         >
           Unbottled Emotions on Instagram
         </h4>
-        <div className='p-5 grid grid-cols-2 gap-3 w-full md:w-5/6'>
+        <div className='p-5 grid grid-cols-3 gap-3 w-full md:w-5/6'>
           {posts
             .filter((post) => post.media_type === "IMAGE")
             .map((post, index) => (
@@ -107,7 +107,7 @@ function BlogAndEventPage() {
                   src={post.media_url}
                   alt={post.timestamp}
                   key={post.id}
-                  className={`w-96 h-96 md:w-full md:h-fit col-span-2 md:col-span-1 ${
+                  className={`w-96 h-96 md:w-full md:h-fit col-span-3 md:col-span-1 ${
                     index > 5 ? (visible ? "" : "hidden") : ""
                   }`}
                 />
