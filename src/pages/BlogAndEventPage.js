@@ -94,18 +94,24 @@ function BlogAndEventPage() {
         >
           Unbottled Emotions on Instagram
         </h4>
-        <div className='p-5 grid grid-cols-3 gap-3 w-full md:w-2/3'>
+        <div className='p-5 grid grid-cols-2 gap-3 w-full md:w-2/3'>
           {posts
             .filter((post) => post.media_type === "IMAGE")
             .map((post, index) => (
-              <img
-                src={post.media_url}
-                alt={post.timestamp}
-                key={post.id}
-                className={`w-96 h-96 md:w-[28rem] md:h-[28rem] object-cover col-span-3 md:col-span-1 ${
-                  index > 5 ? (visible ? "" : "hidden") : ""
-                }`}
-              />
+              <a
+                href='https://www.instagram.com/unbottled.emotions/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <img
+                  src={post.media_url}
+                  alt={post.timestamp}
+                  key={post.id}
+                  className={`w-96 h-96 md:w-full md:h-full object-cover col-span-3 md:col-span-1 ${
+                    index > 5 ? (visible ? "" : "hidden") : ""
+                  }`}
+                />
+              </a>
             ))}
         </div>
         <p
