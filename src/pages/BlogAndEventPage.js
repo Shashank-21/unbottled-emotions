@@ -102,12 +102,13 @@ function BlogAndEventPage() {
                 href='https://www.instagram.com/unbottled.emotions/'
                 target='_blank'
                 rel='noreferrer'
+                className='col-span-3 md:col-span-1'
               >
                 <img
                   src={post.media_url}
                   alt={post.timestamp}
                   key={post.id}
-                  className={`w-96 h-96 md:w-full md:h-fit col-span-3 md:col-span-1 ${
+                  className={`w-96 h-96 md:w-full md:h-fit ${
                     index > 5 ? (visible ? "" : "hidden") : ""
                   }`}
                 />
