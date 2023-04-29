@@ -5,7 +5,7 @@ import Button from "../components/Button";
 function PrivacyPolicyPage() {
   const getAccessToken = async () => {
     const newAccessToken = await axios.get(
-      `"https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=${process.env.REACT_APP_INSTAGRAM_ACCESS}`
+      `https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=${process.env.REACT_APP_INSTAGRAM_ACCESS}`
     );
     console.log(newAccessToken.data);
   };
